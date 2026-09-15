@@ -37,7 +37,7 @@ for (const lang of ['de','en','it','hr']) {
  const serialized = JSON.stringify(data[lang]);
  assert(!/60\+|60 weddings|60 Hochzeiten|385.?916|djkeggybookings@hotmail/.test(serialized), `${lang}: stale public copy`);
  for (const key of ['hero','destination','seo','trust']) assert(!/Schweiz|Switzerland|Svizzera|Švicarsk/i.test(JSON.stringify(data[lang][key])));
- assert(/Schweiz|Switzerland|Svizzera|Švicarsk/i.test(data[lang].about.p2));
+ assert(/Schweiz|Switzerland|Svizzera|Švicarsk/i.test(data[lang].about.p3));
 }
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'Duplicate IDs');
