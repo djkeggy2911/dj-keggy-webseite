@@ -237,7 +237,7 @@ const translations = {
     "references": {
       "heading": "BÜHNEN, ORTE UND ERINNERUNGEN",
       "eyebrow": "AUSGEWÄHLTE REFERENZEN",
-      "croatia": "KROATIEN",
+      "croatia": "KROATIEN – AKTUELLE REFERENZEN",
       "istria": "ISTRIEN",
       "islands": "KVARNER / INSELN",
       "central": "ZENTRALKROATIEN",
@@ -246,8 +246,11 @@ const translations = {
       "more": "MEHR REFERENZEN ANZEIGEN",
       "less": "WENIGER REFERENZEN ANZEIGEN",
       "swiss": "FRÜHERE SCHWEIZER REFERENZEN",
-      "past": "Diese Auftrittsorte stehen für frühere DJ-Erfahrung in der Schweiz.",
-      "germany": "DEUTSCHLAND"
+      "past": "Diese Auftrittsorte stehen ausschließlich für frühere DJ-Erfahrung in der Schweiz. Die Schweiz ist kein aktuelles Einsatzgebiet.",
+      "germany": "DEUTSCHLAND",
+      "croatiaMore": "… sowie zahlreiche weitere Hochzeiten, Clubs, private Feiern und Events in Kroatien.",
+      "swissMore": "… sowie zahlreiche weitere Clubs, Hochzeiten, private Veranstaltungen und Events während meiner langjährigen Tätigkeit in der Schweiz.",
+      "current": "Aktuell buchbar in Kroatien, Deutschland und weiteren europäischen Ländern."
     },
     "instagram": {
       "cta": "DJ KEGGY AUF INSTAGRAM FOLGEN",
@@ -496,7 +499,7 @@ const translations = {
     "references": {
       "heading": "STAGES, PLACES AND MEMORIES",
       "eyebrow": "SELECTED REFERENCES",
-      "croatia": "CROATIA",
+      "croatia": "CROATIA – CURRENT REFERENCES",
       "istria": "ISTRIA",
       "islands": "KVARNER / ISLANDS",
       "central": "CENTRAL CROATIA",
@@ -505,8 +508,11 @@ const translations = {
       "more": "SHOW MORE REFERENCES",
       "less": "SHOW FEWER REFERENCES",
       "swiss": "PAST SWISS REFERENCES",
-      "past": "These venues reflect past DJ experience in Switzerland.",
-      "germany": "GERMANY"
+      "past": "These venues reflect my past DJ experience in Switzerland only. Switzerland is not part of my current service area.",
+      "germany": "GERMANY",
+      "croatiaMore": "… as well as many other weddings, club appearances, private celebrations and events in Croatia.",
+      "swissMore": "… as well as many other club appearances, weddings, private celebrations and events during my many years working in Switzerland.",
+      "current": "Currently available for bookings in Croatia, Germany and other European countries."
     },
     "instagram": {
       "cta": "FOLLOW DJ KEGGY ON INSTAGRAM",
@@ -755,7 +761,7 @@ const translations = {
     "references": {
       "heading": "PALCHI, LUOGHI E RICORDI",
       "eyebrow": "REFERENZE SELEZIONATE",
-      "croatia": "CROAZIA",
+      "croatia": "CROAZIA – REFERENZE ATTUALI",
       "istria": "ISTRIA",
       "islands": "QUARNERO / ISOLE",
       "central": "CROAZIA CENTRALE",
@@ -764,8 +770,11 @@ const translations = {
       "more": "MOSTRA ALTRE REFERENZE",
       "less": "MOSTRA MENO REFERENZE",
       "swiss": "PRECEDENTI REFERENZE IN SVIZZERA",
-      "past": "Queste location rappresentano precedenti esperienze come DJ in Svizzera.",
-      "germany": "GERMANIA"
+      "past": "Queste location rappresentano esclusivamente la mia precedente esperienza come DJ in Svizzera. La Svizzera non rientra nelle mie attuali aree di attività.",
+      "germany": "GERMANIA",
+      "croatiaMore": "… oltre a numerosi altri matrimoni, serate nei club, feste private ed eventi in Croazia.",
+      "swissMore": "… oltre a numerose altre serate nei club, matrimoni, feste private ed eventi durante i miei molti anni di attività in Svizzera.",
+      "current": "Attualmente disponibile per eventi in Croazia, Germania e in altri Paesi europei."
     },
     "instagram": {
       "cta": "SEGUI DJ KEGGY SU INSTAGRAM",
@@ -1014,7 +1023,7 @@ const translations = {
     "references": {
       "heading": "POZORNICE, MJESTA I USPOMENE",
       "eyebrow": "ODABRANE REFERENCE",
-      "croatia": "HRVATSKA",
+      "croatia": "HRVATSKA – AKTUALNE REFERENCE",
       "istria": "ISTRA",
       "islands": "KVARNER / OTOCI",
       "central": "SREDIŠNJA HRVATSKA",
@@ -1023,8 +1032,11 @@ const translations = {
       "more": "PRIKAŽI VIŠE REFERENCIJA",
       "less": "PRIKAŽI MANJE REFERENCIJA",
       "swiss": "RANIJE REFERENCE U ŠVICARSKOJ",
-      "past": "Ove lokacije predstavljaju ranije DJ iskustvo u Švicarskoj.",
-      "germany": "NJEMAČKA"
+      "past": "Ove lokacije predstavljaju isključivo moje ranije DJ iskustvo u Švicarskoj. Švicarska nije dio mojeg aktualnog područja nastupa.",
+      "germany": "NJEMAČKA",
+      "croatiaMore": "… kao i brojna druga vjenčanja, nastupi u klubovima, privatne proslave i događaji u Hrvatskoj.",
+      "swissMore": "… kao i brojni drugi nastupi u klubovima, vjenčanja, privatne proslave i događaji tijekom mojeg dugogodišnjeg rada u Švicarskoj.",
+      "current": "Trenutačno dostupan za nastupe u Hrvatskoj, Njemačkoj i drugim europskim zemljama."
     },
     "instagram": {
       "cta": "PRATI DJ KEGGYJA NA INSTAGRAMU",
