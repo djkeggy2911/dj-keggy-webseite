@@ -26,7 +26,7 @@ const translations = {
       "p1": "Ich bin DJ KEGGY und lebe in Poreč, Istrien. Seit über 15 Jahren begleite ich Hochzeiten, Clubs, private Feiern und Events mit Musik.",
       "p2": "Viele Jahre war ich in der Schweiz tätig und durfte dort zahlreiche Hochzeiten, Clubs und Veranstaltungen musikalisch begleiten. Diese internationale Erfahrung prägt bis heute meinen Stil und meine Arbeit.",
       "cta": "TERMIN ANFRAGEN",
-      "p3": "Heute liegt mein Fokus auf Hochzeiten in Istrien, Kroatien und ganz Europa. Ich begleite nationale und internationale Hochzeiten – von Kroatien über Deutschland und die Schweiz bis zu weiteren europäischen Destinationen. Mit der Erfahrung aus rund 40 Hochzeiten pro Jahr verbinde ich durch Musik Gäste verschiedener Kulturen und Generationen.",
+      "p3": "Heute liegt mein Fokus auf Hochzeiten in Istrien, ganz Kroatien, Deutschland und Europa. Nach vielen Jahren in der Schweiz und zahlreichen Hochzeiten, die ich dort begleitet habe, spiele ich heute auf nationalen und internationalen Hochzeiten in ganz Europa. Mit der Erfahrung aus rund 40 Hochzeiten pro Jahr verbinde ich durch Musik unterschiedliche Kulturen und Generationen.",
       "p4": "Von Balkan und kroatischer Musik über House und Afro House bis zu 90ern, 2000ern, Pop, Rock, Hip-Hop, R&B, Latin, Reggaeton und internationalen Partyhits entsteht jede Musikauswahl individuell.",
       "p5": "Keine Hochzeit ist gleich und deshalb gibt es bei mir keine Standard-Playlist.",
       "p6": "Mein Ziel ist nicht einfach nur Musik abzuspielen. Ich möchte den richtigen Song im richtigen Moment spielen und eine Atmosphäre schaffen, an die sich das Brautpaar und seine Gäste noch lange erinnern."
@@ -286,7 +286,7 @@ const translations = {
       "p1": "I’m DJ KEGGY, based in Poreč, Istria. For over 15 years, I have provided music for weddings, clubs, private celebrations and events.",
       "p2": "I worked in Switzerland for many years, providing music for numerous weddings, clubs and events. That international experience continues to shape my style and my work.",
       "cta": "CHECK AVAILABILITY",
-      "p3": "Today, my focus is on weddings in Istria, Croatia and across Europe. I perform at both local and international weddings, from Croatia to Germany, Switzerland and other European destinations. With experience from around 40 weddings per year, I use music to bring together guests from different cultures and generations.",
+      "p3": "Today, my focus is on weddings in Istria, throughout Croatia, Germany and Europe. After many years in Switzerland, where I provided music for numerous weddings, I now perform at local and international weddings across Europe. With experience from around 40 weddings per year, I bring together different cultures and generations through music.",
       "p4": "From Balkan and Croatian music to House, Afro House, 90s, 2000s, Pop, Rock, Hip-Hop, R&B, Latin, Reggaeton and international party hits, every music selection is personal.",
       "p5": "No two weddings are the same, so there is no standard playlist.",
       "p6": "My aim goes beyond playing music. I want to play the right song at the right moment and create an atmosphere that the couple and their guests will remember for years."
@@ -546,7 +546,7 @@ const translations = {
       "p1": "Sono DJ KEGGY e vivo a Poreč, in Istria. Da oltre 15 anni accompagno con la musica matrimoni, serate nei club, feste private ed eventi.",
       "p2": "Ho lavorato per molti anni in Svizzera, accompagnando numerosi matrimoni, serate nei club ed eventi. Questa esperienza internazionale continua a influenzare il mio stile e il mio lavoro.",
       "cta": "RICHIEDI DISPONIBILITÀ",
-      "p3": "Oggi mi dedico principalmente ai matrimoni in Istria, in Croazia e in tutta Europa. Mi esibisco in matrimoni nazionali e internazionali, dalla Croazia alla Germania, alla Svizzera e in altre destinazioni europee. Con un’esperienza di circa 40 matrimoni all’anno, attraverso la musica unisco ospiti di culture e generazioni diverse.",
+      "p3": "Oggi mi dedico principalmente ai matrimoni in Istria, in tutta la Croazia, in Germania e in Europa. Dopo molti anni trascorsi in Svizzera, dove ho accompagnato con la mia musica numerosi matrimoni, oggi mi esibisco in matrimoni nazionali e internazionali in tutta Europa. Con un’esperienza di circa 40 matrimoni all’anno, attraverso la musica unisco culture e generazioni diverse.",
       "p4": "Dalla musica balcanica e croata a House, Afro House, anni ’90 e 2000, Pop, Rock, Hip-Hop, R&B, Latin, Reggaeton e successi internazionali: ogni selezione musicale è personalizzata.",
       "p5": "Ogni matrimonio è diverso: per questo non propongo playlist standard.",
       "p6": "Il mio obiettivo va oltre il semplice mettere musica. Voglio scegliere il brano giusto al momento giusto e creare un’atmosfera che gli sposi e i loro ospiti ricorderanno a lungo."
@@ -806,7 +806,7 @@ const translations = {
       "p1": "Ja sam DJ KEGGY i živim u Poreču, u Istri. Više od 15 godina glazbom pratim vjenčanja, klupske večeri, privatne proslave i događaje.",
       "p2": "Mnogo sam godina radio u Švicarskoj, gdje sam glazbom pratio brojna vjenčanja, klupske večeri i događaje. To međunarodno iskustvo i danas oblikuje moj stil i rad.",
       "cta": "ZATRAŽI TERMIN",
-      "p3": "Danas je moj fokus na vjenčanjima u Istri, Hrvatskoj i diljem Europe. Nastupam na domaćim i međunarodnim vjenčanjima, od Hrvatske do Njemačke, Švicarske i drugih europskih destinacija. S iskustvom od oko 40 vjenčanja godišnje, glazbom povezujem goste različitih kultura i generacija.",
+      "p3": "Danas je moj fokus na vjenčanjima u Istri, diljem Hrvatske, Njemačke i Europe. Nakon dugogodišnjeg iskustva u Švicarskoj i velikog broja odrađenih vjenčanja, danas nastupam na domaćim i međunarodnim vjenčanjima diljem Europe. S iskustvom od oko 40 vjenčanja godišnje, glazbom povezujem goste različitih kultura i generacija.",
       "p4": "Od balkanske i hrvatske glazbe, Housea i Afro Housea do hitova 90-ih i 2000-ih, Popa, Rocka, Hip-Hopa, R&B-a, Latina, Reggaetona i međunarodnih party hitova — svaki glazbeni izbor je individualan.",
       "p5": "Nijedno vjenčanje nije isto, zato kod mene nema standardne playliste.",
       "p6": "Moj cilj nije samo puštati glazbu. Želim pustiti pravu pjesmu u pravom trenutku i stvoriti atmosferu koju će mladenci i njihovi gosti dugo pamtiti."
