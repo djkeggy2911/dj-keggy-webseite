@@ -3,6 +3,30 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const html = fs.readFileSync('index.html', 'utf8');
+// Hostinger caches assets for seven days. Changed CSS/JS must use a new URL.
+const crypto = require('node:crypto');
+const path = require('node:path');
+const manifest = new Set(fs.readFileSync('deploy-files.txt', 'utf8').trim().split(/\r?\n/));
+for (const name of ['style.css', 'script.js', 'translations.js']) {
+ const hash = crypto.createHash('sha256').update(fs.readFileSync(name, 'utf8').replace(/\r\n/g, '\n')).digest('hex').slice(0,16);
+ assert(html.includes(`"${name}?v=${hash}"`), `Update the cache version for ${name}`);
+}
+const css = fs.readFileSync('style.css', 'utf8');
+const dependencies = [
+ ...[...html.matchAll(/(?:src|poster|href)="([^"]+)"/g)].map(m => m[1]),
+ ...[...css.matchAll(/url\(\s*["']?([^"')\s]+)["']?\s*\)/g)].map(m => m[1]),
+ ...[...fs.readFileSync('script.js','utf8').matchAll(/fetch\(["']([^"']+)["']/g)].map(m => m[1]),
+];
+for (const url of dependencies) {
+ if (/^(?:[a-z]+:|\/\/|#)/i.test(url)) continue;
+ const name = url.split(/[?#]/)[0];
+ assert(manifest.has(name), `Dependency missing from deploy-files.txt: ${name}`);
+ let directory = '.';
+ for (const part of name.split('/')) {
+  assert(fs.readdirSync(directory).includes(part), `Linux path case mismatch: ${name}`);
+  directory = path.join(directory, part);
+ }
+}
 const i18n = fs.readFileSync('translations.js', 'utf8');
 const js = fs.readFileSync('script.js', 'utf8');
 const data = JSON.parse(i18n.slice(i18n.indexOf('{'), i18n.indexOf('\nconst applyTranslation')).trim().replace(/;$/, ''));
