@@ -1,0 +1,42 @@
+# Editor and local development
+.vscode/
+.idea/
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Secrets and private configuration
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+id_rsa*
+id_ed25519*
+
+# Backups and local FTPS tooling
+.deployment-local/
+.deploy-endtime/
+backup/
+backups/
+tools/Deploy-Endtime.ps1
+tools/Prepare-Endtime.cjs
+tools/Test-HostingerFtp.ps1
+
+# Temporary files and logs
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+*.log
+.DS_Store
+Thumbs.db

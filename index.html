@@ -3,206 +3,602 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DJ KEGGY - Premium Wedding & Event DJ für Kroatien, die Schweiz und ganz Europa.">
-    <title>DJ KEGGY | Premium Wedding & Event DJ</title>
+    <meta name="description" content="DJ Keggy – Hochzeits- und Event-DJ aus Poreč, Kroatien. 15+ Jahre Erfahrung und rund 40 Hochzeiten pro Jahr. Destination Weddings in Istrien, Kroatien und europaweit.">
+    <title>DJ Keggy | Hochzeits DJ Kroatien &amp; Destination Wedding DJ Istrien</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://marrydj.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marrydj.com/">
+<meta property="og:title" content="DJ Keggy | Hochzeits DJ Kroatien &amp; Destination Wedding DJ Istrien">
+<meta property="og:description" content="DJ Keggy – Hochzeits- und Event-DJ aus Poreč, Kroatien. 15+ Jahre Erfahrung und rund 40 Hochzeiten pro Jahr. Destination Weddings in Istrien, Kroatien und europaweit.">
+<meta property="og:image" content="https://marrydj.com/images/dj1.jpg">
+<meta name="theme-color" content="#101110">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"DJ KEGGY","url":"https://marrydj.com/","email":"info@marrydj.com","image":"https://marrydj.com/images/dj1.jpg","address":{"@type":"PostalAddress","addressLocality":"Poreč","addressRegion":"Istria","addressCountry":"HR"},"areaServed":["Poreč","Vrsar","Rovinj","Umag","Novigrad","Pula","Istria","Krk","Rab","Rijeka","Kvarner","Zagreb","Split","Dalmatia","Croatia","Europe"],"sameAs":["https://www.instagram.com/dj__keggy/"],"description":"DJ Keggy – Hochzeits- und Event-DJ aus Poreč, Kroatien. 15+ Jahre Erfahrung und rund 40 Hochzeiten pro Jahr. Destination Weddings in Istrien, Kroatien und europaweit."}</script>
 </head>
 
 <body>
+<a data-i18n="a11y.skip" class="skip-link" href="#main">Zum Inhalt</a>
     <header class="site-header" id="home">
-        <video class="hero-video" autoplay muted loop playsinline poster="images/hero.jpeg" aria-hidden="true">
+        <video id="hero-video" class="hero-video" preload="none" autoplay muted loop playsinline poster="images/dj1.jpg" aria-hidden="true">
             <source src="videos/homepage-background.mp4" type="video/mp4">
         </video>
+<button type="button" class="hero-video-toggle" data-i18n="a11y.pause" aria-controls="hero-video">Hintergrundvideo pausieren</button>
 
-        <nav class="navbar" aria-label="Hauptnavigation">
-            <a class="brand" href="#home" aria-label="DJ KEGGY Startseite">
+        <nav class="navbar" aria-label="Hauptnavigation" data-i18n-aria-label="a11y.nav">
+            <a class="brand" href="#home" aria-label="DJ KEGGY Startseite" data-i18n-aria-label="a11y.home">
                 <span>DJ</span> KEGGY
             </a>
 
-            <button class="menu-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false">
+            <button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="Menü öffnen oder schließen" data-i18n-aria-label="a11y.menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <ul class="site-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#services">Leistungen</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+            <ul class="site-nav" id="site-nav">
+                <li>
+<a href="#home" data-i18n="nav.home">HOME</a></li>
+                <li>
+<a href="#about" data-i18n="nav.about">ÜBER MICH</a></li>
+                <li>
+<a href="#services" data-i18n="nav.services">LEISTUNGEN</a></li>
+                <li>
+<a href="#gallery" data-i18n="nav.gallery">GALERIE</a></li>
+                <li>
+<a class="nav-quote" href="#contact" data-i18n="nav.quote">KONTAKT</a></li>
             </ul>
+
+            <div class="language-switcher" aria-label="Sprachauswahl" data-i18n-aria-label="a11y.language">
+                <button class="lang-btn" type="button" data-lang="de">DE</button>
+                <button class="lang-btn" type="button" data-lang="en">EN</button>
+                <button class="lang-btn" type="button" data-lang="it">IT</button>
+                <button class="lang-btn" type="button" data-lang="hr">HR</button>
+            </div>
         </nav>
 
-        <section class="hero" aria-label="DJ KEGGY Premium Event DJ">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content reveal">
-                <p class="eyebrow">Croatia · Switzerland · Europe</p>
-                <div class="badge">Signature Selection</div>
-                <h1>Premium Sound für unvergessliche Nächte</h1>
-                <p class="hero-copy">
-                    Exklusive Hochzeiten, stilvolle Events und elegante Firmenfeiern mit musikalischem Feingefühl,
-                    souveräner Moderation und einer Tanzfläche, die lebt.
-                </p>
+                <p class="eyebrow" data-i18n="hero.eyebrow">CROATIA • EUROPE</p>
+                
+                <h1 id="hero-title" data-i18n="hero.title">HOCHZEITEN, DIE MAN NICHT VERGISST.</h1>
+<p data-i18n="hero.badge" class="hero-subtitle">DJ KEGGY – Wedding &amp; Event DJ</p>
+                <p class="hero-copy" data-i18n="hero.copy">15+ Jahre Erfahrung, rund 40 Hochzeiten pro Jahr und ein Gespür für die Musik, die Menschen verbindet. Von exklusiven Hochzeiten in Istrien bis zu Destination Weddings in Kroatien und ganz Europa.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#contact">Jetzt anfragen</a>
-                    <a class="btn btn-secondary" href="#services">Leistungen ansehen</a>
+                    <a class="btn btn-primary" href="#contact" data-i18n="hero.ctaPrimary">JETZT TERMIN ANFRAGEN</a>
+                    <a class="btn btn-secondary" href="#weddings" data-i18n="hero.ctaSecondary">HOCHZEITEN ENTDECKEN</a>
                 </div>
             </div>
 
-            <div class="hero-stats reveal" aria-label="Erfahrung und Einsatzgebiet">
-                <div>
-                    <strong>15+</strong>
-                    <span>Jahre Erfahrung</span>
-                </div>
-                <div>
-                    <strong>40+</strong>
-                    <span>Hochzeiten pro Jahr</span>
-                </div>
-                <div>
-                    <strong>EU</strong>
-                    <span>Events europaweit</span>
-                </div>
-            </div>
         </section>
     </header>
 
-    <main>
+    <main id="main">
+<section class="trust-strip" aria-label="DJ KEGGY">
+<ul>
+<li><strong>15+</strong>
+<span data-i18n="trust.experience" >JAHRE ERFAHRUNG</span></li>
+<li><strong>40+</strong>
+<span data-i18n="trust.weddings" >HOCHZEITEN PRO JAHR</span></li>
+<li><strong data-i18n="trust.europe" >EUROPAWEIT</strong>
+<span data-i18n="hero.eyebrow" >CROATIA • EUROPE</span></li>
+</ul>
+</section>
         <section class="section about" id="about">
             <div class="section-grid">
                 <div class="about-image reveal">
-                    <img src="images/hero.jpeg" alt="DJ KEGGY bei einem exklusiven Event">
+                    <img loading="lazy" decoding="async" src="images/dj2.jpg" width="697" height="454" data-i18n-alt="a11y.event" alt="DJ KEGGY am DJ-Pult an der kroatischen Küste">
                 </div>
 
                 <div class="section-copy reveal">
-                    <p class="eyebrow">Über mich</p>
-                    <h2>Musik mit Klasse, Timing und Persönlichkeit.</h2>
-                    <p>
-                        Seit über 15 Jahren begleite ich Hochzeiten, private Feiern und Corporate Events in Kroatien,
-                        der Schweiz und ganz Europa. Mein Anspruch ist ein eleganter Sound, der genau zum Moment passt:
-                        emotional beim Empfang, souverän beim Dinner und energiegeladen auf der Tanzfläche.
-                    </p>
-                    <p>
-                        Jede Veranstaltung bekommt ein individuelles musikalisches Konzept. Von internationalen Classics
-                        über moderne Club-Sounds bis zu persönlichen Wunschmomenten entsteht ein Abend, der hochwertig,
-                        nahbar und unverwechselbar bleibt.
-                    </p>
-                    <a class="text-link" href="#contact">Termin unverbindlich anfragen</a>
+                    <p class="eyebrow" data-i18n="about.eyebrow">Über mich</p>
+                    <h2 data-i18n="about.heading">MUSIK, ERFAHRUNG UND DAS RICHTIGE GESPÜR FÜR DEN MOMENT.</h2>
+                    <p data-i18n="about.p1" >Ich bin DJ KEGGY und lebe in Poreč, Istrien. Seit über 15 Jahren begleite ich Hochzeiten, Clubs, private Feiern und Events mit Musik.</p>
+<p data-i18n="about.p2" >Viele Jahre war ich in der Schweiz tätig und durfte dort zahlreiche Hochzeiten, Clubs und Veranstaltungen musikalisch begleiten. Diese internationale Erfahrung prägt bis heute meinen Stil und meine Arbeit.</p>
+<p data-i18n="about.p3" >Heute liegt mein Schwerpunkt auf Hochzeiten und Destination Weddings in Istrien, ganz Kroatien und Europa. Mit rund 40 Hochzeiten pro Jahr bringe ich unterschiedlichste Gäste, Kulturen und Generationen musikalisch zusammen.</p>
+<p data-i18n="about.p4" >Von Balkan und kroatischer Musik über House und Afro House bis zu 90ern, 2000ern, Pop, Rock, Hip-Hop, R&amp;B, Latin, Reggaeton und internationalen Partyhits entsteht jede Musikauswahl individuell.</p>
+<p data-i18n="about.p5" >Keine Hochzeit ist gleich und deshalb gibt es bei mir keine Standard-Playlist.</p>
+<p data-i18n="about.p6" >Mein Ziel ist nicht einfach nur Musik abzuspielen. Ich möchte den richtigen Song im richtigen Moment spielen und eine Atmosphäre schaffen, an die sich das Brautpaar und seine Gäste noch lange erinnern.</p>
+<a class="text-link" href="#contact" data-i18n="about.cta">TERMIN ANFRAGEN</a>
                 </div>
             </div>
         </section>
 
         <section class="section services" id="services">
             <div class="section-heading reveal">
-                <p class="eyebrow">Leistungen</p>
-                <h2>Premium-Service für besondere Anlässe</h2>
+                <p class="eyebrow" data-i18n="services.eyebrow">Leistungen</p>
+                <h2 data-i18n="services.heading">MUSIK FÜR BESONDERE MOMENTE</h2>
             </div>
 
             <div class="service-grid">
-                <article class="service-card reveal">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                    </div>
-                    <h3>Wedding DJ</h3>
-                    <p>Stilvolle Begleitung vom Empfang bis zur letzten Zugabe mit Musik, die Generationen verbindet.</p>
-                </article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">01</span>
+<h3 data-i18n="services.card1.title" >WEDDING DJ</h3>
+<p data-i18n="services.card1.copy" >Musikalische Begleitung vom Empfang bis zur Party. Individuell abgestimmt auf das Brautpaar, die Gäste und den Ablauf der Hochzeit.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">02</span>
+<h3 data-i18n="services.card2.title" >DESTINATION WEDDINGS</h3>
+<p data-i18n="services.card2.copy" >Professionelle musikalische Begleitung für Destination Weddings in Istrien, ganz Kroatien und europaweit. Ideal für internationale Brautpaare und Hochzeiten mit Gästen aus verschiedenen Ländern.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">03</span>
+<h3 data-i18n="services.card3.title" >SOUND &amp; LICHT</h3>
+<p data-i18n="services.card3.copy" >Professionelle Ton- und Lichttechnik passend zur Location, Gästezahl und gewünschten Atmosphäre.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">04</span>
+<h3 data-i18n="services.card4.title" >INDIVIDUELLE MUSIKPLANUNG</h3>
+<p data-i18n="services.card4.copy" >Keine Standard-Playlist. Musikrichtungen, Must-Play-Songs, besondere Wünsche und No-Go-Songs werden vor der Hochzeit persönlich abgestimmt.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">05</span>
+<h3 data-i18n="services.card5.title" >MODERATION</h3>
+<p data-i18n="services.card5.copy" >Dezente und professionelle Moderation wichtiger Programmpunkte auf Wunsch.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">06</span>
+<h3 data-i18n="services.card6.title" >LIVE-SÄNGER</h3>
+<p data-i18n="services.card6.copy" >Optional buchbarer Live-Sänger für Kirche und Apéro sowie auf Wunsch auch für den ersten Tanz.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">07</span>
+<h3 data-i18n="services.card7.title" >PRIVATE EVENTS</h3>
+<p data-i18n="services.card7.copy" >Geburtstage, Jubiläen und exklusive private Feiern mit individuell abgestimmter Musik.</p>
+</article>
+<article class="service-card reveal">
+<span class="service-number" aria-hidden="true">08</span>
+<h3 data-i18n="services.card8.title" >CORPORATE EVENTS</h3>
+<p data-i18n="services.card8.copy" >Professionelle musikalische Begleitung für Firmenveranstaltungen, Galas und Business Events.</p>
+</article>
+</div>
+</section>
 
-                <article class="service-card reveal">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M4 11h16M6 7h12M8 15h8M10 19h4"/></svg>
-                    </div>
-                    <h3>Event Sound</h3>
-                    <p>Professioneller Sound für Galas, Firmenfeiern, Clubs und exklusive private Events.</p>
-                </article>
 
-                <article class="service-card reveal">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8h14M7 16h10"/><circle cx="12" cy="12" r="9"/></svg>
-                    </div>
-                    <h3>Moderation</h3>
-                    <p>Dezente, klare und charmante Ansagen, damit jeder Programmpunkt elegant ineinandergreift.</p>
-                </article>
-
-                <article class="service-card reveal">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M4 18V6l8-4 8 4v12l-8 4-8-4Z"/><path d="M8 8h8v8H8z"/></svg>
-                    </div>
-                    <h3>Licht & Atmosphäre</h3>
-                    <p>Fein abgestimmte Lichtstimmung für Dinner, Eröffnungstanz und Party ohne überladene Showeffekte.</p>
-                </article>
-            </div>
-        </section>
+<section class="section wedding" id="weddings">
+<div class="section-heading">
+<h2 data-i18n="wedding.heading">Musik für jeden Moment Ihrer Hochzeit</h2>
+</div><ol class="wedding-steps">
+<li>
+<span aria-hidden="true">01</span>
+<h3 data-i18n="wedding.step0">Persönliches Vorgespräch</h3></li>
+<li>
+<span aria-hidden="true">02</span>
+<h3 data-i18n="wedding.step1">Individuelle Musikplanung</h3></li>
+<li>
+<span aria-hidden="true">03</span>
+<h3 data-i18n="wedding.step2">Professioneller Aufbau</h3></li>
+<li>
+<span aria-hidden="true">04</span>
+<h3 data-i18n="wedding.step3">Begleitung von Empfang bis Party</h3></li></ol>
+<a class="btn btn-primary" href="#contact" data-i18n="about.cta">TERMIN ANFRAGEN</a>
+</section>
+        <section class="section destination" id="destination">
+<div class="destination-inner">
+<div>
+<p data-i18n="destination.eyebrow" class="eyebrow">VON POREČ AUS. FÜR EURE GESCHICHTE.</p>
+<h2 data-i18n="destination.heading" >DESTINATION WEDDINGS IN ISTRIEN</h2>
+</div>
+<div>
+<p data-i18n="destination.p1" >Istrien bietet einige der schönsten Hochzeitslocations Kroatiens – von eleganten Villen und Resorts bis zu romantischen Locations direkt am Meer.</p>
+<p data-i18n="destination.p2" >Von meinem Standort in Poreč begleite ich Hochzeiten in Poreč, Vrsar, Rovinj, Umag, Novigrad, Pula und ganz Istrien.</p>
+<p data-i18n="destination.p3" >Auch Destination Weddings auf Krk, Rab, in Rijeka / Kvarner, Zagreb, Split, Dalmatien sowie in ganz Kroatien und Europa sind möglich.</p>
+<a data-i18n="about.cta" class="btn btn-primary" href="#contact">TERMIN ANFRAGEN</a>
+</div>
+</div>
+<p class="destination-places">POREČ · VRSAR · ROVINJ · UMAG · NOVIGRAD · PULA · KRK · RAB · RIJEKA · ZAGREB · SPLIT</p>
+</section>
+<section class="section balkan" id="experience">
+<div class="balkan-inner">
+<div>
+<p data-i18n="balkan.subtitle" class="eyebrow">TRADITION TRIFFT MODERNE PARTY.</p>
+<h2 data-i18n="balkan.heading" >BALKAN WEDDINGS MIT INTERNATIONALER ERFAHRUNG</h2>
+<p data-i18n="balkan.p1" >Balkan-Hochzeiten leben von Emotionen, Tradition, Familie und einer besonderen musikalischen Mischung.</p>
+<p data-i18n="balkan.p2" >Durch meine langjährige internationale DJ-Erfahrung kenne ich sowohl klassische und moderne Balkan-Hits als auch internationale Musik, mit der Gäste unterschiedlicher Generationen gemeinsam feiern können. Die Musikauswahl wird individuell mit dem Brautpaar geplant.</p>
+</div>
+<ul class="balkan-checks">
+<li data-i18n="balkan.check0" >Balkan &amp; Croatian Music</li>
+<li data-i18n="balkan.check1" >Internationale Hits</li>
+<li data-i18n="balkan.check2" >Deutsch</li>
+<li data-i18n="balkan.check3" >Hrvatski</li>
+<li data-i18n="balkan.check4" >English</li>
+<li data-i18n="balkan.check5" >Individuelle Musikwünsche</li>
+<li data-i18n="balkan.check6" >Professionelle Soundtechnik</li>
+<li data-i18n="balkan.check7" >Lichttechnik</li>
+<li data-i18n="balkan.check8" >Moderation auf Wunsch</li>
+</ul>
+</div>
+</section>
+<section class="section references" id="references">
+<div class="section-heading">
+<p data-i18n="references.eyebrow" class="eyebrow">AUSGEWÄHLTE REFERENZEN</p>
+<h2 data-i18n="references.heading" >BÜHNEN, ORTE UND ERINNERUNGEN</h2>
+</div>
+<div class="references-inner">
+<h3 data-i18n="references.croatia" >KROATIEN</h3>
+<div class="region-grid">
+<article>
+<h4 data-i18n="references.istria" >ISTRIEN</h4>
+<p>Poreč · Rovinj · Umag · Pula</p>
+</article>
+<article>
+<h4 data-i18n="references.islands" >KVARNER / INSELN</h4>
+<p>Krk · Rab</p>
+</article>
+<article>
+<h4 data-i18n="references.central" >ZENTRALKROATIEN</h4>
+<p>Zagreb</p>
+</article>
+<article>
+<h4 data-i18n="references.dalmatia" >DALMATIEN</h4>
+<p>Split · Makarska</p>
+</article>
+</div>
+<h4 data-i18n="references.clubs" >BEKANNTE LOCATIONS / CLUBS</h4>
+<ul class="venue-list">
+<li>Buba Beach Makarska</li>
+<li>Planet Umag</li>
+<li>Saint &amp; Sinner Poreč</li>
+<li>Casanova Club</li>
+</ul>
+<details class="reference-details">
+<summary>
+<span class="when-closed" data-i18n="references.more">MEHR REFERENZEN ANZEIGEN</span>
+<span class="when-open" data-i18n="references.less">WENIGER REFERENZEN ANZEIGEN</span></summary>
+<h3 data-i18n="references.swiss" >FRÜHERE SCHWEIZER REFERENZEN</h3>
+<p data-i18n="references.past" >Diese Auftrittsorte stehen für frühere DJ-Erfahrung in der Schweiz.</p>
+<div class="region-grid">
+<article>
+<h4>Zürich</h4>
+<p>Kaufleuten · Jill Club · Flamingo · Station Club</p>
+</article>
+<article>
+<h4>Luzern</h4>
+<p>Road House · Vegas Club · El Cartel · Max</p>
+</article>
+<article>
+<h4>Zug</h4>
+<p>Diamonds Club</p>
+</article>
+<article>
+<h4>Basel</h4>
+<p>Moon Club</p>
+</article>
+</div>
+<h3 data-i18n="references.germany" >DEUTSCHLAND</h3>
+<p>Augsburg · K Club</p>
+</details>
+</div>
+</section>
 
         <section class="section gallery" id="gallery">
             <div class="section-heading reveal">
-                <p class="eyebrow">Galerie</p>
-                <h2>Momente, die nachklingen</h2>
+                <p class="eyebrow" data-i18n="gallery.eyebrow">WEDDINGS • EVENTS • DESTINATION CELEBRATIONS</p>
+                <h2 data-i18n="gallery.heading">MOMENTE, DIE BLEIBEN</h2>
             </div>
 
-            <div class="gallery-grid">
-                <figure class="gallery-item gallery-large reveal">
-                    <img src="images/hero.jpeg" alt="DJ KEGGY auf einer Premium-Veranstaltung">
-                </figure>
-                <figure class="gallery-item reveal">
-                    <img src="images/hero.jpeg" alt="Elegante Event-Stimmung mit DJ KEGGY">
-                </figure>
-                <figure class="gallery-item reveal">
-                    <img src="images/hero.jpeg" alt="Musik und Atmosphäre auf einer Hochzeit">
-                </figure>
-                <figure class="gallery-item reveal">
-                    <img src="images/hero.jpeg" alt="Tanzfläche bei einem exklusiven Event">
-                </figure>
-            </div>
-        </section>
+            <div class="gallery-grid masonry-gallery">
+<figure class="gallery-item reveal">
+<a href="images/dj1.jpg" data-lightbox="gallery" class="gallery-link"><img loading="lazy" decoding="async" src="images/dj1.jpg" width="705" height="431" data-i18n-alt="a11y.dj" alt="DJ KEGGY am Mischpult vor einer feiernden Hochzeitsgesellschaft">
+<span class="gallery-zoom" aria-hidden="true">↗</span></a>
+</figure>
+<figure class="gallery-item reveal">
+<a href="images/dj2.jpg" data-lightbox="gallery" class="gallery-link"><img loading="lazy" decoding="async" src="images/dj2.jpg" width="697" height="454" data-i18n-alt="a11y.event" alt="DJ KEGGY am DJ-Pult an der kroatischen Küste">
+<span class="gallery-zoom" aria-hidden="true">↗</span></a>
+</figure>
+</div>
+</section>
 
-        <section class="section contact" id="contact">
-            <div class="contact-wrap">
-                <div class="section-copy reveal">
-                    <p class="eyebrow">Kontakt</p>
-                    <h2>Lass uns deinen Abend planen.</h2>
-                    <p>
-                        Erzähle kurz von deinem Event, dem Ort und dem gewünschten Datum. Ich melde mich persönlich
-                        mit einem passenden Vorschlag für Musik, Ablauf und Atmosphäre.
-                    </p>
-                    <div class="contact-details">
-                        <a href="mailto:booking@dj-keggy.com">booking@dj-keggy.com</a>
-                        <a href="tel:+41000000000">+41 00 000 00 00</a>
+
+<section class="section impressions" id="videos" aria-labelledby="videos-heading">
+ <div class="section-heading">
+<h2 id="videos-heading" data-i18n="videos.heading">Erleben Sie die Stimmung</h2>
+<p data-i18n="videos.copy">Ein kleiner Einblick in Hochzeiten, Events und unvergessliche Partynächte.</p>
+</div>
+ <div class="video-frame video-frame-portrait">
+  <video class="event-video" id="event-impression" controls playsinline preload="metadata" width="512" height="910" data-i18n-aria-label="videos.heading" aria-label="Erleben Sie die Stimmung"><source src="videos/wedding-atmosphere.mp4" type="video/mp4"></video>
+  <button class="video-play" type="button" aria-controls="event-impression" hidden>
+<span aria-hidden="true">▶</span>
+<span data-i18n="videos.play">Video abspielen</span></button>
+ </div>
+</section>
+        <!-- DEVELOPER: No verified review sources were found. Keep this section hidden.
+Publish only with the customer's permission and a genuine review/source. Add translated
+review text and author to translations.js, then remove hidden. Never publish sample reviews. -->
+<section class="section testimonials-section" id="testimonials" hidden>
+ <div class="section-heading">
+<h2 data-i18n="testimonials.heading">WAS BRAUTPAARE SAGEN</h2>
+</div>
+ <div class="testimonial-grid"><!-- Insert verified testimonial-card articles here. -->
+</div>
+</section>
+
+        <section class="section instagram">
+<p class="eyebrow">@dj__keggy</p>
+<p data-i18n="instagram.copy" >Noch mehr Musik, Momente und Einblicke.</p>
+<a data-i18n="instagram.cta" class="text-link" href="https://www.instagram.com/dj__keggy/" target="_blank" rel="noopener noreferrer">DJ KEGGY AUF INSTAGRAM FOLGEN</a>
+</section>
+<section class="section contact quote-section" id="contact">
+            <div class="quote-shell">
+                <div class="quote-heading reveal">
+                    <p class="eyebrow" data-i18n="quote.eyebrow">EUER TAG. EURE MUSIK.</p>
+                    <h2 data-i18n="quote.heading">ERZÄHLT MIR VON EURER HOCHZEIT.</h2>
+                    <p data-i18n="quote.copy">Je mehr ich über euren Tag weiß, desto besser kann ich die musikalische Begleitung planen und ein individuelles Angebot erstellen.</p>
+
+                    <div class="quote-meta">
+                        <div class="quote-inline-note">
+                            <span class="pulse-dot" aria-hidden="true"></span>
+                            <span data-i18n="quote.responseTime">Antwort in der Regel innerhalb von 24 Stunden.</span>
+                        </div>
+
+                        <div class="quote-contact-list" data-i18n-aria-label="quote.contactInfoLabel" aria-label="Kontaktinformationen">
+<a class="quote-contact-link" href="mailto:info@marrydj.com">
+<span data-i18n="contact.emailLabel" >E-Mail</span><strong>info@marrydj.com</strong></a>
+<a class="quote-contact-link" href="https://www.instagram.com/dj__keggy/" target="_blank" rel="noopener noreferrer">
+<span>Instagram</span><strong>@dj__keggy</strong></a>
+<div class="quote-contact-link">
+<span data-i18n="contact.locationLabel" >Standort</span><strong>Poreč, Istria, Croatia</strong>
+</div>
+</div>
+
+                        <div class="quote-progress" data-i18n-aria-label="quote.progressLabel" aria-label="Formular-Fortschritt">
+                            <div class="progress-track">
+                                <div class="progress-bar" id="form-progress" role="progressbar" data-i18n-aria-label="quote.progressLabel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Formular-Fortschritt">
+</div>
+                            </div>
+                            <div class="progress-value" id="form-progress-value">0%</div>
+                        </div>
                     </div>
                 </div>
 
-                <form class="contact-form reveal" action="#" method="post">
-                    <label>
-                        Name
-                        <input type="text" name="name" placeholder="Dein Name" required>
+                <form class="quote-form" id="offer-form" action="send-offer.php" method="post" novalidate>
+<p data-i18n="quote.requiredNote" class="form-required-note">* Pflichtfelder. Weitere Angaben sind freiwillig.</p>
+                    <fieldset>
+                        <legend data-i18n="quote.personalLegend">Persönliche Angaben</legend>
+                        <div class="quote-grid">
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.firstname">Vorname</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="text" name="firstname" autocomplete="given-name" placeholder="Vorname" data-i18n-placeholder="quote.firstnamePlaceholder" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.lastname">Nachname</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="text" name="lastname" autocomplete="family-name" placeholder="Nachname" data-i18n-placeholder="quote.lastnamePlaceholder" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.email">E-Mail</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="email" name="email" autocomplete="email" placeholder="E-Mail" data-i18n-placeholder="quote.emailPlaceholder" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.phone">Telefon</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="Telefon" data-i18n-placeholder="quote.phonePlaceholder" required>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend data-i18n="quote.eventLegend">Eventinformationen</legend>
+                        <div class="quote-grid">
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.eventType">Art des Events</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <select name="event_type" required>
+                                    <option value="" selected disabled data-i18n="quote.eventTypePlaceholder">Bitte auswählen</option>
+                                    <option value="Hochzeit" data-i18n="quote.eventTypeWedding">Hochzeit</option>
+                                    <option value="Geburtstag" data-i18n="quote.eventTypeBirthday">Geburtstag</option>
+                                    <option value="Firmenfeier" data-i18n="quote.eventTypeCorporate">Firmenfeier</option>
+                                    <option value="Club / Event" data-i18n="quote.eventTypeClub">Club / Event</option>
+                                    <option value="Sonstiges" data-i18n="quote.eventTypeOther">Sonstiges</option>
+                                </select>
+                            </label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.date">Hochzeits- / Veranstaltungsdatum</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="date" name="event_date" placeholder="Datum" data-i18n-placeholder="quote.datePlaceholder" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.startTime">Beginn</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="time" name="start_time" placeholder="Beginn" data-i18n-placeholder="quote.startTimePlaceholder" required>
+                            </label>
+<label class="field">
+<span data-i18n="quote.endTime" class="field-label">Endzeit *</span>
+<input type="time" name="end_time" required>
+</label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.location">Veranstaltungsort (Ort &amp; Location)</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="text" name="location" placeholder="z. B. Poreč, Villa oder Hotel" data-i18n-placeholder="quote.locationPlaceholder" required>
+                            </label>
+<label class="field">
+<span class="field-label" data-i18n="quote.country">Region / Land</span>
+<span class="required-mark" aria-hidden="true">*</span>
+<input type="text" name="country" autocomplete="off" placeholder="z. B. Istrien, Kroatien" data-i18n-placeholder="quote.countryPlaceholder" required>
+</label>
+                            <label class="field">
+                                <span class="field-label" data-i18n="quote.guests">Gästeanzahl</span>
+<span class="required-mark" aria-hidden="true">*</span>
+                                <input type="number" name="guests" inputmode="numeric" step="1" placeholder="Gästeanzahl" data-i18n-placeholder="quote.guestsPlaceholder" min="1" required>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend data-i18n="quote.musicLegend">Musik</legend>
+                        <div class="choice-grid music-grid" role="group" data-i18n-aria-label="quote.musicLegend" aria-label="Musik">
+<label>
+<input type="checkbox" name="music[]" value="Balkan">
+<span>Balkan</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Croatian">
+<span data-i18n="quote.musicCroatian">Kroatisch</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="House">
+<span>House</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Afro House">
+<span>Afro House</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="90s / 2000s">
+<span data-i18n="quote.music90s" >90er / 2000er</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Pop">
+<span>Pop</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Rock">
+<span>Rock</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Hip-Hop / R&B">
+<span>Hip-Hop / R&B</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Latin">
+<span>Latin</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="Reggaeton">
+<span>Reggaeton</span>
+</label>
+<label>
+<input type="checkbox" name="music[]" value="International party hits">
+<span data-i18n="quote.musicInternational" >Internationale Partyhits</span>
+</label>
+</div>
+
+                        <label class="field field-textarea wide-field">
+                            <span class="field-label" data-i18n="quote.musicExclude">Welche Musik soll nicht gespielt werden?</span>
+                            <textarea name="no_music" rows="4" placeholder="Welche Musik soll nicht gespielt werden?" data-i18n-placeholder="quote.musicExcludePlaceholder"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend data-i18n="quote.serviceLegend">Leistungen</legend>
+                        <div class="choice-grid services-grid" role="group" data-i18n-aria-label="quote.serviceLegend" aria-label="Leistungen">
+<label>
+<input type="checkbox" name="services[]" value="DJ-Service">
+<span data-i18n="quote.serviceDj" >DJ-Service</span>
+</label>
+<label>
+<input type="checkbox" name="services[]" value="Tonanlage">
+<span data-i18n="quote.serviceSound" >Tonanlage</span>
+</label>
+<label>
+<input type="checkbox" name="services[]" value="Lichtanlage">
+<span data-i18n="quote.serviceLight" >Lichtanlage</span>
+</label>
+<label>
+<input type="checkbox" name="services[]" value="Moderation">
+<span data-i18n="quote.serviceHosting" >Moderation</span>
+</label>
+</div>
+<label class="field singer-field">
+<span data-i18n="quote.singer" class="field-label">Sänger gewünscht?</span>
+<select name="singer">
+<option value="" data-i18n="quote.eventTypePlaceholder">Bitte auswählen</option>
+<option value="yes" data-i18n="quote.yes">Ja</option>
+<option value="no" data-i18n="quote.no">Nein</option>
+</select>
+</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend data-i18n="quote.messageLegend">Weitere Informationen</legend>
+<label class="field field-textarea wide-field">
+<span data-i18n="quote.wishes" class="field-label">Besondere Wünsche</span><textarea name="special_wishes" rows="3" data-i18n-placeholder="quote.wishesPlaceholder" placeholder="Euer erster Tanz, Must-Play-Songs oder besondere Momente …"></textarea>
+</label>
+                        <label class="field field-textarea wide-field">
+                            <span class="field-label" data-i18n="quote.messageLabel">Nachricht</span>
+                            <textarea name="message" rows="5" placeholder="Bitte ergänze hier alles Wissenswerte zu deinem Event." data-i18n-placeholder="quote.messagePlaceholder"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend data-i18n="quote.sourceLabel">Wie haben Sie uns gefunden?</legend>
+                        <div class="choice-grid source-grid" role="radiogroup" data-i18n-aria-label="quote.sourceLabel" aria-label="Wie haben Sie uns gefunden?">
+                            <label>
+<input type="radio" name="source" value="Google">
+<span data-i18n="quote.sourceGoogle">Google</span>
+</label>
+                            <label>
+<input type="radio" name="source" value="Instagram">
+<span data-i18n="quote.sourceInstagram">Instagram</span>
+</label>
+                            <label>
+<input type="radio" name="source" value="TikTok">
+<span data-i18n="quote.sourceTiktok">TikTok</span>
+</label>
+                            <label>
+<input type="radio" name="source" value="Facebook">
+<span data-i18n="quote.sourceFacebook">Facebook</span>
+</label>
+                            <label>
+<input type="radio" name="source" value="Empfehlung">
+<span data-i18n="quote.sourceReferral">Empfehlung</span>
+</label>
+                            <label>
+<input type="radio" name="source" value="Andere">
+<span data-i18n="quote.sourceOther">Andere</span>
+</label>
+                        </div>
+                    </fieldset>
+
+                    <label class="privacy-check">
+                        <input type="checkbox" name="privacy" required>
+                        <span>
+<span aria-hidden="true">* </span>
+<span data-i18n="quote.privacy">Ich habe die Datenschutzhinweise zur Kenntnis genommen.</span> <a class="privacy-link" href="#privacy" data-i18n="privacy.title">Datenschutz</a></span>
                     </label>
-                    <label>
-                        E-Mail
-                        <input type="email" name="email" placeholder="dein@email.com" required>
-                    </label>
-                    <label>
-                        Eventdatum
-                        <input type="date" name="date">
-                    </label>
-                    <label>
-                        Nachricht
-                        <textarea name="message" rows="5" placeholder="Was planst du?" required></textarea>
-                    </label>
-                    <button class="btn btn-primary" type="submit">Anfrage senden</button>
-                    <p class="form-note" role="status" aria-live="polite"></p>
+
+                    <button class="btn btn-primary quote-submit" type="submit" data-i18n="quote.submit">JETZT WUNSCHTERMIN ANFRAGEN</button>
+                    <p class="form-note" id="offer-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
+
+<section class="section privacy-section" id="privacy" aria-labelledby="privacy-title" tabindex="-1">
+ <details class="privacy-details">
+<summary id="privacy-title" data-i18n="privacy.title">Datenschutz</summary>
+ <div class="privacy-copy">
+<h3 data-i18n="privacy.heading0">Verantwortlicher und Kontakt</h3>
+<p data-i18n="privacy.text0">Manuel Kegelj – MarryDJ / DJ KEGGY. E-Mail: info@marrydj.com</p>
+<h3 data-i18n="privacy.heading1">Anfragen und Kommunikation</h3>
+<p data-i18n="privacy.text1">Wir verarbeiten die von Ihnen angegebenen Kontakt- und Eventdaten, Musikwünsche, gebuchten Leistungen und Nachrichten, um Ihre Anfrage zu beantworten und ein Angebot vorzubereiten. Pflichtangaben sind für die Bearbeitung erforderlich; weitere Angaben sind freiwillig. Die Anfrage wird per E-Mail übermittelt. Bei aktivierter WhatsApp-Benachrichtigung werden die Anfragedaten zusätzlich über die WhatsApp Business Cloud API von Meta an den Anbieter dieser Website gesendet. Ein WhatsApp-Konto des Kunden ist dafür nicht erforderlich.</p>
+<h3 data-i18n="privacy.heading2">Betrieb der Website und externe Dienste</h3>
+<p data-i18n="privacy.text2">Die Website wird bei Hostinger gehostet. Beim Abruf können technische Daten wie IP-Adresse, Zeitpunkt und angefragte Dateien in Serverprotokollen verarbeitet werden. Schriftarten werden von Google Fonts geladen; dabei erhält Google technische Verbindungsdaten, insbesondere die IP-Adresse. Bilder und Videos werden vom Webserver geladen. Ein Klick auf Instagram führt zu einem externen Dienst. Bei Google und Meta können Daten auch außerhalb des Europäischen Wirtschaftsraums verarbeitet werden.</p>
+<h3 data-i18n="privacy.heading3">Zwecke, Rechtsgrundlagen und Speicherung</h3>
+<p data-i18n="privacy.text3">Soweit die DSGVO anwendbar ist, erfolgt die Bearbeitung von Angebotsanfragen und Buchungen auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Der sichere Betrieb und die Organisation der Kommunikation dienen berechtigten Interessen nach Art. 6 Abs. 1 lit. f DSGVO. Daten werden so lange benötigt, wie die Anfrage oder Buchung bearbeitet wird; gesetzliche Aufbewahrungspflichten und die Durchsetzung oder Abwehr von Ansprüchen können eine längere Speicherung erfordern.</p>
+<h3 data-i18n="privacy.heading4">Ihre Rechte</h3>
+<p data-i18n="privacy.text4">Sie können sich über die oben genannten Kontaktdaten an uns wenden, um Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit nach den anwendbaren Voraussetzungen zu verlangen. Gegen eine Verarbeitung auf Grundlage berechtigter Interessen können Sie Widerspruch einlegen. Eine erteilte Einwilligung können Sie für die Zukunft widerrufen. Sie können sich bei einer zuständigen Datenschutzaufsichtsbehörde beschweren.</p>
+ <a href="mailto:info@marrydj.com">info@marrydj.com</a><br>
+ <a class="text-link" href="#offer-form" data-i18n="privacy.back">Zurück zum Formular</a>
+</div>
+</details>
+</section>
     </main>
 
     <footer class="site-footer">
-        <a class="brand" href="#home"><span>DJ</span> KEGGY</a>
-        <p>Premium Wedding & Event DJ</p>
-        <p>© <span id="year"></span> DJ KEGGY. Alle Rechte vorbehalten.</p>
+        <a class="privacy-link" href="#privacy" data-i18n="privacy.title">Datenschutz</a>
+        <a class="brand" href="#home">
+<span>DJ</span> KEGGY</a>
+        <p data-i18n="footer.tagline">CROATIA • EUROPE</p>
+        <p>© <span id="year"></span> DJ KEGGY. <span data-i18n="footer.copyright">Alle Rechte vorbehalten.</span></p>
     </footer>
 
+    
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

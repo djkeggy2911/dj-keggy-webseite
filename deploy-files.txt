@@ -1,0 +1,10 @@
+index.html
+style.css
+script.js
+translations.js
+send-offer.php
+whatsapp-notify.php
+images/dj1.jpg
+images/dj2.jpg
+videos/homepage-background.mp4
+videos/wedding-atmosphere.mp4

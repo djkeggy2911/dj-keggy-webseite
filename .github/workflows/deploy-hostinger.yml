@@ -1,0 +1,41 @@
+name: Deploy marrydj.com to Hostinger
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marrydj-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the pushed commit
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Validate website and deployment list
+        run: |
+          python3 tools/deploy_hostinger.py --check
+          python3 -m unittest discover -s tools -p 'test_deploy_hostinger.py'
+          node --check script.js
+          node --check translations.js
+          node tools/check-site.cjs
+          php -l send-offer.php
+          php -l whatsapp-notify.php
+
+      - name: Upload and verify only the allowed production files
+        env:
+          HOSTINGER_FTPS_HOST: ${{ secrets.HOSTINGER_FTPS_HOST }}
+          HOSTINGER_FTPS_IP: ${{ secrets.HOSTINGER_FTPS_IP }}
+          HOSTINGER_FTPS_USER: ${{ secrets.HOSTINGER_FTPS_USER }}
+          HOSTINGER_FTPS_PASSWORD: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
+        run: python3 tools/deploy_hostinger.py --deploy
