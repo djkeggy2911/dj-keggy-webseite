@@ -33,6 +33,8 @@ class DeploymentTests(unittest.TestCase):
                      '.vscode/sftp.json', 'tools/check-site.cjs', 'WHATSAPP-SETUP.md',
                      'videos/../send-offer.php', 'images/.secret.jpg', 'images/run.php',
                      'admin/config.php', 'admin/.env', 'admin/uploads/file.php',
+                     '.htaccess', 'images/.htaccess', 'admin/other/.htaccess',
+                     'admin/../.htaccess', 'admin/.htaccess.bak',
                      'database/001_cms.sql', 'tools/cms_create_admin.php']:
             with self.subTest(name=name):
                 self.manifest(self.names + [name])

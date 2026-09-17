@@ -15,7 +15,7 @@ ROOT_FILES = {
 }
 MEDIA_TYPES = {'images': {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.svg'},
                'videos': {'.mp4', '.webm'}}
-ADMIN_FILES = {'admin/index.php', 'admin/core.php', 'admin/admin.css'}
+ADMIN_FILES = {'admin/index.php', 'admin/core.php', 'admin/admin.css', 'admin/.htaccess'}
 WEBROOT = '/public_html'
 
 
@@ -31,7 +31,7 @@ def deployment_files(root):
             raise ValueError('Deployment list contains an invalid path.')
         parts = name.split('/')
         p = PurePosixPath(name)
-        if p.is_absolute() or any(not part or part.startswith('.') for part in parts):
+        if p.is_absolute() or (name != 'admin/.htaccess' and any(not part or part.startswith('.') for part in parts)):
             raise ValueError('Absolute, hidden or parent paths are forbidden.')
         allowed = name in ROOT_FILES or name in ADMIN_FILES or (
             len(parts) >= 2 and parts[0] in MEDIA_TYPES
@@ -51,7 +51,7 @@ def deployment_files(root):
     if not ROOT_FILES.issubset(files):
         raise ValueError('The complete PHP/frontend release must be in deploy-files.txt.')
     if ADMIN_FILES.intersection(files) and not ADMIN_FILES.issubset(files):
-        raise ValueError('Admin deployment must contain all three approved files.')
+        raise ValueError('Admin deployment must contain all approved files.')
     # HTML last reduces the chance of referencing assets not yet uploaded.
     return sorted(files, key=lambda name: (name == 'index.html', name))
 

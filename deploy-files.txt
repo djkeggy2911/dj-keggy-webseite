@@ -11,3 +11,4 @@ videos/wedding-atmosphere.mp4
 admin/core.php
 admin/admin.css
 admin/index.php
+admin/.htaccess

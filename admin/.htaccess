@@ -1,0 +1,4 @@
+# Apply the existing admin policy after PHP, including error responses.
+# Scoped to /admin; do not replace the public website's policy.
+Header onsuccess unset Content-Security-Policy
+Header always set Content-Security-Policy "default-src 'none'; style-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'; upgrade-insecure-requests"
