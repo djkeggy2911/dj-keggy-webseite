@@ -31,7 +31,9 @@ class DeploymentTests(unittest.TestCase):
     def test_reject_nonproduction_paths(self):
         for name in ['../private.php', '/etc/passwd', '.env', '.github/workflows/x.yml',
                      '.vscode/sftp.json', 'tools/check-site.cjs', 'WHATSAPP-SETUP.md',
-                     'videos/../send-offer.php', 'images/.secret.jpg', 'images/run.php']:
+                     'videos/../send-offer.php', 'images/.secret.jpg', 'images/run.php',
+                     'admin/config.php', 'admin/.env', 'admin/uploads/file.php',
+                     'database/001_cms.sql', 'tools/cms_create_admin.php']:
             with self.subTest(name=name):
                 self.manifest(self.names + [name])
                 with self.assertRaises(ValueError):
@@ -49,6 +51,18 @@ class DeploymentTests(unittest.TestCase):
             p.symlink_to(self.root / 'script.js')
         except OSError:
             return  # Windows may lack local symlink privileges.
+        with self.assertRaises(ValueError):
+            deployment_files(self.root)
+
+    def test_only_exact_admin_files_allowed(self):
+        from deploy_hostinger import ADMIN_FILES
+        for name in ADMIN_FILES:
+            p = self.root / name
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text('test')
+        self.manifest(self.names + sorted(ADMIN_FILES))
+        self.assertEqual(set(deployment_files(self.root)), set(self.names) | ADMIN_FILES)
+        self.manifest(self.names + ['admin/index.php'])
         with self.assertRaises(ValueError):
             deployment_files(self.root)
 

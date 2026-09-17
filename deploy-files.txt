@@ -8,3 +8,6 @@ images/dj1.jpg
 images/dj2.jpg
 videos/homepage-background.mp4
 videos/wedding-atmosphere.mp4
+admin/core.php
+admin/admin.css
+admin/index.php

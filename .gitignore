@@ -11,6 +11,11 @@ __pycache__/
 .env.*
 !.env.example
 secrets/
+cms-private/
+*.sql
+!/database/*.sql
+*.sql.gz
+*.sql.enc
 *.pem
 *.key
 *.p12
