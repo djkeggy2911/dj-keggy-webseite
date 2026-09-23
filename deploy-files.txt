@@ -12,3 +12,14 @@ admin/core.php
 admin/admin.css
 admin/index.php
 admin/.htaccess
+admin/phase2.php
+lib/reviews.php
+lib/qr.php
+lib/.htaccess
+review/index.php
+review/feed.php
+review/review.js
+review/review.css
+review/homepage.js
+review/translations.json
+review/.htaccess

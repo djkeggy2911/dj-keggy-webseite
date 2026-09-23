@@ -35,6 +35,7 @@ class DeploymentTests(unittest.TestCase):
                      'admin/config.php', 'admin/.env', 'admin/uploads/file.php',
                      '.htaccess', 'images/.htaccess', 'admin/other/.htaccess',
                      'admin/../.htaccess', 'admin/.htaccess.bak',
+                     'lib/config.php', 'review/.env', 'review/uploads/file.php',
                      'database/001_cms.sql', 'tools/cms_create_admin.php']:
             with self.subTest(name=name):
                 self.manifest(self.names + [name])
@@ -57,7 +58,8 @@ class DeploymentTests(unittest.TestCase):
             deployment_files(self.root)
 
     def test_only_exact_admin_files_allowed(self):
-        from deploy_hostinger import ADMIN_FILES
+        from deploy_hostinger import ADMIN_FILES, REVIEW_FILES
+        ADMIN_FILES = ADMIN_FILES | REVIEW_FILES
         for name in ADMIN_FILES:
             p = self.root / name
             p.parent.mkdir(parents=True, exist_ok=True)

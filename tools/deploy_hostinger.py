@@ -15,7 +15,10 @@ ROOT_FILES = {
 }
 MEDIA_TYPES = {'images': {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.svg'},
                'videos': {'.mp4', '.webm'}}
-ADMIN_FILES = {'admin/index.php', 'admin/core.php', 'admin/admin.css', 'admin/.htaccess'}
+ADMIN_FILES = {'admin/index.php', 'admin/core.php', 'admin/admin.css', 'admin/.htaccess', 'admin/phase2.php'}
+REVIEW_FILES = {'lib/reviews.php','lib/qr.php','lib/.htaccess','review/index.php','review/feed.php',
+                'review/review.js','review/review.css','review/homepage.js','review/translations.json','review/.htaccess'}
+HIDDEN_FILES = {'admin/.htaccess','review/.htaccess','lib/.htaccess'}
 WEBROOT = '/public_html'
 
 
@@ -31,9 +34,9 @@ def deployment_files(root):
             raise ValueError('Deployment list contains an invalid path.')
         parts = name.split('/')
         p = PurePosixPath(name)
-        if p.is_absolute() or (name != 'admin/.htaccess' and any(not part or part.startswith('.') for part in parts)):
+        if p.is_absolute() or (name not in HIDDEN_FILES and any(not part or part.startswith('.') for part in parts)):
             raise ValueError('Absolute, hidden or parent paths are forbidden.')
-        allowed = name in ROOT_FILES or name in ADMIN_FILES or (
+        allowed = name in ROOT_FILES or name in ADMIN_FILES or name in REVIEW_FILES or (
             len(parts) >= 2 and parts[0] in MEDIA_TYPES
             and p.suffix.lower() in MEDIA_TYPES[parts[0]]
         )
@@ -52,6 +55,8 @@ def deployment_files(root):
         raise ValueError('The complete PHP/frontend release must be in deploy-files.txt.')
     if ADMIN_FILES.intersection(files) and not ADMIN_FILES.issubset(files):
         raise ValueError('Admin deployment must contain all approved files.')
+    if (REVIEW_FILES | ADMIN_FILES).intersection(files) and not (REVIEW_FILES | ADMIN_FILES).issubset(files):
+        raise ValueError('Review deployment requires the complete approved module.')
     # HTML last reduces the chance of referencing assets not yet uploaded.
     return sorted(files, key=lambda name: (name == 'index.html', name))
 

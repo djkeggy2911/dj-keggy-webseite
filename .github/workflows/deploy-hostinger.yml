@@ -47,6 +47,16 @@ jobs:
           php -l admin/index.php
           php -l tools/cms_create_admin.php
           php tools/test_cms.php
+          php -l admin/phase2.php
+          php -l lib/reviews.php
+          php -l lib/qr.php
+          php -l review/index.php
+          php -l review/feed.php
+          php -l tools/cms_migrate.php
+          php -l tools/cms_cleanup.php
+          node --check review/review.js
+          node --check review/homepage.js
+          node tools/test_reviews_frontend.cjs
 
       - name: Test CMS against disposable MySQL (never Hostinger)
         env:
@@ -59,6 +69,9 @@ jobs:
         run: |
           php tools/test_cms.php
           python3 tools/test_cms_http.py
+          python3 -m venv "$RUNNER_TEMP/review-tests"
+          "$RUNNER_TEMP/review-tests/bin/pip" install Pillow==12.3.0 zxing-cpp==3.1.1
+          "$RUNNER_TEMP/review-tests/bin/python" tools/test_reviews.py
 
       - name: Upload and verify only the allowed production files
         env:

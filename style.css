@@ -2377,3 +2377,6 @@ button { font-family: inherit; }
 /* The atmosphere clip is portrait; preserve its full frame on every screen. */
 .video-frame.video-frame-portrait { width: min(100%, 420px, 42svh); }
 .video-frame-portrait .event-video { height: auto; aspect-ratio: 512 / 910; object-fit: contain; }
+
+/* CMS reviews: retain original quote formatting and long-word wrapping. */
+.testimonial-card .review-quote{white-space:pre-wrap;overflow-wrap:anywhere}
