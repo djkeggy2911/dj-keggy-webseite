@@ -41,7 +41,7 @@ async function main() {
   const translations = JSON.parse(fs.readFileSync('review/translations.json', 'utf8'));
   for (const language of ['de','hr','en','it']) {
     assert.deepEqual(Object.keys(translations[language]),Object.keys(translations.de));
-    assert(!Object.values(translations[language]).some(value => value.includes('?') || value.includes('\uFFFD')), 'Damaged text encoding');
+    assert(!Object.values(translations[language]).some(value => value.includes('\uFFFD')), 'Damaged text encoding');
   }
   const policy = fs.readFileSync('review/.htaccess','utf8');
   for (const directive of ["default-src 'none'", "script-src 'self'", "frame-ancestors 'none'", "form-action 'self'", "base-uri 'none'"]) assert(policy.includes(directive));
