@@ -72,7 +72,7 @@ const translations = {
     },
     "testimonials": {
       "eyebrow": "Testimonials",
-      "heading": "WAS BRAUTPAARE SAGEN"
+      "heading": "DAS SAGEN MEINE GÄSTE"
     },
     "contact": {
       "eyebrow": "Kontakt",
@@ -334,7 +334,7 @@ const translations = {
     },
     "testimonials": {
       "eyebrow": "Testimonials",
-      "heading": "WHAT COUPLES SAY"
+      "heading": "WHAT MY GUESTS SAY"
     },
     "contact": {
       "eyebrow": "Contact",
@@ -596,7 +596,7 @@ const translations = {
     },
     "testimonials": {
       "eyebrow": "Testimonianze",
-      "heading": "COSA DICONO GLI SPOSI"
+      "heading": "COSA DICONO I MIEI OSPITI"
     },
     "contact": {
       "eyebrow": "Contatto",
@@ -858,7 +858,7 @@ const translations = {
     },
     "testimonials": {
       "eyebrow": "Testimonials",
-      "heading": "ŠTO KAŽU MLADENCI"
+      "heading": "ŠTO KAŽU MOJI GOSTI"
     },
     "contact": {
       "eyebrow": "Kontakt",

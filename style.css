@@ -2299,8 +2299,23 @@ button { font-family: inherit; }
 #offer-form { scroll-margin-top: 110px; }
 .site-footer { border-radius: 0; box-shadow: none; background: var(--bg); border: 0; border-top: 1px solid var(--line); padding: 38px 24px; }
 .site-footer p { font-size: .72rem; }
-.testimonial-grid { display: grid; grid-auto-flow: column; grid-auto-columns: min(85vw, 360px); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; }
-.testimonial-card { scroll-snap-align: start; }
+.testimonials-section { padding-block: clamp(48px, 7vw, 88px); }
+.testimonials-section h2 { text-wrap: balance; }
+.testimonial-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px; max-width: 1180px; margin-inline: auto; }
+.testimonial-card { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; padding: clamp(24px, 3vw, 38px); border-color: var(--line); border-radius: 16px; background: linear-gradient(145deg, #22231f, #151613); overflow-wrap: anywhere; }
+.testimonial-card:only-child { flex-basis: 100%; max-width: 760px; }
+.testimonial-card:first-child:nth-last-child(2), .testimonial-card:first-child:nth-last-child(2) ~ .testimonial-card { flex-basis: calc((100% - 24px) / 2); max-width: 520px; }
+.testimonial-card::before { display: none; }
+.testimonial-card .testimonial-stars { margin: 0 0 22px; color: var(--gold-soft); font-size: 1.15rem; letter-spacing: .16em; line-height: 1.4; }
+.testimonial-card .review-quote { margin: 0; color: var(--text); font-size: clamp(1rem, 1.2vw, 1.12rem); line-height: 1.8; }
+.testimonial-card .testimonial-author { display: block; margin: 24px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: .9rem; font-weight: 600; line-height: 1.5; }
+@media (max-width: 960px) {
+ .testimonial-card { flex-basis: calc((100% - 24px) / 2); }
+}
+@media (max-width: 640px) {
+ .testimonial-grid { gap: 18px; }
+ #testimonials .testimonial-card { flex-basis: 100%; max-width: none; }
+}
 @media (max-width: 1100px) {
  .navbar, .navbar.scrolled { gap: 14px; }
  .menu-toggle { display: block; margin-left: auto; }
