@@ -2301,14 +2301,14 @@ button { font-family: inherit; }
 .site-footer p { font-size: .72rem; }
 .testimonials-section { padding-block: clamp(48px, 7vw, 88px); }
 .testimonials-section h2 { text-wrap: balance; }
-.testimonial-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px; max-width: 1180px; margin-inline: auto; }
-.testimonial-card { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; padding: clamp(24px, 3vw, 38px); border-color: var(--line); border-radius: 16px; background: linear-gradient(145deg, #22231f, #151613); overflow-wrap: anywhere; }
-.testimonial-card:only-child { flex-basis: 100%; max-width: 760px; }
-.testimonial-card:first-child:nth-last-child(2), .testimonial-card:first-child:nth-last-child(2) ~ .testimonial-card { flex-basis: calc((100% - 24px) / 2); max-width: 520px; }
+.testimonial-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px; max-width: 1040px; margin-inline: auto; }
+.testimonial-card { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; padding: clamp(22px, 2.5vw, 30px); border-color: var(--line); border-radius: 16px; background: linear-gradient(145deg, #22231f, #151613); overflow-wrap: anywhere; }
+.testimonial-card:only-child { flex-basis: 100%; max-width: 560px; }
+.testimonial-card:first-child:nth-last-child(2), .testimonial-card:first-child:nth-last-child(2) ~ .testimonial-card { flex-basis: calc((100% - 24px) / 2); max-width: 430px; }
 .testimonial-card::before { display: none; }
-.testimonial-card .testimonial-stars { margin: 0 0 22px; color: var(--gold-soft); font-size: 1.15rem; letter-spacing: .16em; line-height: 1.4; }
+.testimonial-card .testimonial-stars { margin: 0 0 16px; color: var(--gold-soft); font-size: 1.15rem; letter-spacing: .16em; line-height: 1.4; }
 .testimonial-card .review-quote { margin: 0; color: var(--text); font-size: clamp(1rem, 1.2vw, 1.12rem); line-height: 1.8; }
-.testimonial-card .testimonial-author { display: block; margin: 24px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: .9rem; font-weight: 600; line-height: 1.5; }
+.testimonial-card .testimonial-author { display: block; margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: .9rem; font-weight: 600; line-height: 1.5; }
 @media (max-width: 960px) {
  .testimonial-card { flex-basis: calc((100% - 24px) / 2); }
 }
