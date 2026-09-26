@@ -147,8 +147,14 @@ def run():
                 assert admin.request('/admin/?page=reviews',dict(moderation,csrf='bad'))[0]==403
                 assert admin.request('/admin/?page=reviews',dict(moderation,status='invented'))[0]==422
                 assert admin.request('/admin/?page=reviews',moderation)[0]==303
-                feed=json.loads(anon.request('/review/feed.php')[2])['reviews'];assert len(feed)==1 and set(feed[0])=={'stars','display_name','body','language'}
+                feed=json.loads(anon.request('/review/feed.php')[2])['reviews'];assert len(feed)==1 and set(feed[0])=={'stars','display_name','body','language','wedding_date','location'}
                 assert feed[0]['language']=='hr' and feed[0]['body']==payload['body']
+                assert feed[0]['wedding_date']=='2026-09-20' and feed[0]['location']=='Poreč & Rovinj'
+                assert 'PRIVATE NOTE' not in json.dumps(feed) and 'Edited wedding' not in json.dumps(feed)
+                assert admin.request('/admin/?page=weddings',dict(wedding,id=wedding_id,wedding_date='2026-09-21',location='Opatija'))[0]==303
+                updated=json.loads(anon.request('/review/feed.php')[2])['reviews'][0]
+                assert updated['location']=='Opatija' and updated['wedding_date']=='2026-09-21'
+                assert sql_number('SELECT COUNT(*) FROM cms_reviews')==1
                 for status in ['rejected','approved','pending']:
                     assert admin.request('/admin/?page=reviews',dict(moderation,status=status))[0]==303
                     assert bool(json.loads(anon.request('/review/feed.php')[2])['reviews'])==(status=='approved')

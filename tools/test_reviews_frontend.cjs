@@ -18,7 +18,7 @@ async function main() {
     for (const width of [390, 800, 1280]) {
       const grid = new Element(), section = new Element(), created = [], events = {};
       section.querySelector = () => grid;
-      const review = {stars: 5, display_name: '<img onerror=alert(1)>', body: '<script>alert(1)</script>', language: 'hr'};
+      const review = {stars: 5, display_name: '<img onerror=alert(1)>', body: '<script>alert(1)</script>', language: 'hr', location: '<img onerror=alert(1)> Opatija', wedding_date: '2026-09-12'};
       const root = {lang: 'de'};
       const media = [];
       vm.runInNewContext(fs.readFileSync('review/homepage.js','utf8'), {
@@ -61,6 +61,10 @@ async function main() {
       for (const lang of ['de','hr','en','it']) {
         root.lang = lang; events.languagechange();
         assert(prev.attributes['aria-label']); assert(next.attributes['aria-label']);
+        const details = grid.children[0].children[3];
+        const expectedDate = new Intl.DateTimeFormat(lang, {day:'2-digit',month:'2-digit',year:'numeric',timeZone:'UTC'}).format(new Date('2026-09-12T00:00:00Z'));
+        assert.equal(details.textContent, review.location + ' · ' + expectedDate);
+        assert.equal(details.lang, lang); assert.equal(details.hidden, false);
       }
       media[0].matches = true; media[0].change(); assert.equal(visible().length, 1);
     }
@@ -76,6 +80,7 @@ async function main() {
       fetch: async () => ({ok: true, json: async () => ({reviews: [{stars: 5, body, display_name: 'Test fixture'}]})})
     });
     await new Promise(resolve => setImmediate(resolve));
+    assert.equal(grid.children[0].children[4].hidden, true);
     const quote = grid.children[0].children[1], toggle = grid.children[0].children[2];
     assert(quote.textContent.length < body.length);
     for (const [lang, more, less] of [['de','Mehr lesen','Weniger anzeigen'],['hr','Pročitaj više','Prikaži manje'],['en','Read more','Show less'],['it','Leggi di più','Mostra meno']]) {

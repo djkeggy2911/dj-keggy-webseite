@@ -45,7 +45,23 @@
                 toggle.addEventListener('click', () => { expanded = !expanded; update(); });
                 toggles.push(update); update(); card.append(toggle);
             }
-            card.append(author); grid.append(card); cards.push(card);
+            card.append(author);
+            const details = make('p', 'review-wedding');
+            const updateDetails = () => {
+                const parts = [];
+                if (typeof review.location === 'string' && review.location.trim()) parts.push(review.location.trim());
+                if (typeof review.wedding_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(review.wedding_date)) {
+                    const date = new Date(review.wedding_date + 'T00:00:00Z');
+                    if (!Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === review.wedding_date) {
+                        parts.push(new Intl.DateTimeFormat(language(), {day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC'}).format(date));
+                    }
+                }
+                details.textContent = parts.join(' · ');
+                details.lang = language();
+                details.hidden = parts.length === 0;
+            };
+            toggles.push(updateDetails); updateDetails(); card.append(details);
+            grid.append(card); cards.push(card);
         }
         section.hidden = cards.length === 0;
         if (!cards.length) return;

@@ -59,7 +59,7 @@ function review_moderate(PDO $db,int $id,string $status): void {
     $db->prepare('UPDATE cms_reviews SET status=?,moderated_at=UTC_TIMESTAMP() WHERE id=? AND consent=1')->execute([$status,$id]);
 }
 function review_public(PDO $db): array {
-    return $db->query("SELECT stars,display_name,body,language FROM cms_reviews WHERE status='approved' AND consent=1 ORDER BY id DESC LIMIT 30")->fetchAll(PDO::FETCH_ASSOC);
+    return $db->query("SELECT r.stars,r.display_name,r.body,r.language,w.wedding_date,w.location FROM cms_reviews r JOIN cms_weddings w ON w.id=r.wedding_id WHERE r.status='approved' AND r.consent=1 ORDER BY r.id DESC LIMIT 30")->fetchAll(PDO::FETCH_ASSOC);
 }
 function review_qr_svg(string $code): string {
     if(!preg_match('/^[a-f0-9]{64}$/D',$code))throw new InvalidArgumentException('Invalid code');

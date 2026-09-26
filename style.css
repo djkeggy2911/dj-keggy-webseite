@@ -2404,6 +2404,7 @@ button { font-family: inherit; }
 .review-slider .testimonial-grid[data-visible="2"] > .testimonial-card { flex-basis: calc((100% - 24px) / 2); max-width: 400px; }
 .review-slider .testimonial-card .review-quote { font-size: 1rem; line-height: 1.75; }
 .review-slider .testimonial-card .testimonial-author { margin-top: auto; padding-top: 14px; }
+.review-slider .review-wedding { margin: 5px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; overflow-wrap: anywhere; }
 .review-slider .testimonial-card .review-quote { margin-bottom: 18px; }
 .review-expand { align-self: flex-start; background: none; border: 0; padding: 8px 0; margin: -10px 0 12px; color: var(--gold-soft); font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
 .review-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 1px solid #c2a67666; border-radius: 50%; background: var(--bg-soft); color: var(--gold-soft); font-size: 2rem; line-height: 1; cursor: pointer; }
