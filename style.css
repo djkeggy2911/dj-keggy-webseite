@@ -2398,6 +2398,7 @@ button { font-family: inherit; }
 /* Public review carousel: bounded rows, manual navigation, no autoplay. */
 .review-slider { position: relative; max-width: 1160px; margin-inline: auto; padding-inline: 52px; }
 .review-slider .testimonial-grid { align-items: stretch; }
+.review-slider .testimonial-card .testimonial-stars { color: #ffdc73; text-shadow: 0 0 6px rgb(255 207 87 / 22%); }
 .review-slider .testimonial-card { display: flex; flex-direction: column; flex-basis: calc((100% - 48px) / 3); max-width: none; padding: 24px; }
 .review-slider .testimonial-card[hidden] { display: none; }
 .review-slider .testimonial-grid[data-visible="1"] > .testimonial-card { flex-basis: 100%; max-width: 480px; }
