@@ -5,7 +5,7 @@ const source = fs.readFileSync('translations.js', 'utf8');
 const data = JSON.parse(source.slice(source.indexOf('{'), source.indexOf('\nconst applyTranslation')).trim().replace(/;$/, ''));
 const urls = {de:'https://marrydj.com/',en:'https://marrydj.com/en.html',it:'https://marrydj.com/it.html',hr:'https://marrydj.com/hr.html'};
 const escape = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-let template = fs.readFileSync('index.html','utf8');
+let template = fs.readFileSync('index.html','utf8').replace(/\r\n/g,'\n');
 for (const file of ['style.css','script.js','translations.js']) {
  const hash = crypto.createHash('sha256').update(fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n')).digest('hex').slice(0,16);
  template = template.replace(new RegExp(file.replace('.','\\.')+'\\?v=[a-f0-9]+','g'),file+'?v='+hash);

@@ -192,8 +192,8 @@ const translations = {
       "menu": "Menü öffnen oder schließen",
       "language": "Sprachauswahl",
       "close": "Bild schließen",
-      "dj": "DJ KEGGY am Mischpult vor einer feiernden Hochzeitsgesellschaft",
-      "event": "DJ KEGGY am DJ-Pult an der kroatischen Küste",
+      "dj": "DJ KEGGY am Mischpult mit erhobenem Arm vor tanzenden Hochzeitsgästen",
+      "event": "DJ KEGGY mit Kopfhörern am DJ-Pult direkt am Meer",
       "pause": "Hintergrundvideo pausieren",
       "play": "Hintergrundvideo abspielen",
       "skip": "Zum Inhalt"
@@ -213,10 +213,10 @@ const translations = {
       "text4": "Sie können sich über die oben genannten Kontaktdaten an uns wenden, um Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit nach den anwendbaren Voraussetzungen zu verlangen. Gegen eine Verarbeitung auf Grundlage berechtigter Interessen können Sie Widerspruch einlegen. Eine erteilte Einwilligung können Sie für die Zukunft widerrufen. Sie können sich bei einer zuständigen Datenschutzaufsichtsbehörde beschweren."
     },
     "destination": {
-      "heading": "WEDDING DJ IN ISTRIEN",
+      "heading": "HOCHZEITS DJ IN ISTRIEN",
       "eyebrow": "VON POREČ AUS. FÜR EURE GESCHICHTE.",
       "p1": "Istrien bietet einige der schönsten Hochzeitslocations Kroatiens – von eleganten Villen und Resorts bis zu romantischen Locations direkt am Meer.",
-      "p2": "Als Wedding DJ in Istrien begleite ich von Poreč aus Hochzeiten in Vrsar, Rovinj, Umag, Novigrad und Pula – vom Empfang bis zur Party.",
+      "p2": "Als Hochzeits-DJ in Istrien begleite ich von Poreč aus Hochzeiten in Rovinj, Vrsar, Umag, Novigrad und Pula – vom Empfang bis zur Party.",
       "p3": "Auch Destination Weddings auf Krk, Rab, in Opatija, Rijeka / Kvarner, Zagreb, Split, Dalmatien sowie in ganz Kroatien und Europa sind möglich."
     },
     "balkan": {
@@ -257,8 +257,8 @@ const translations = {
       "copy": "Noch mehr Musik, Momente und Einblicke."
     },
     "seo": {
-      "title": "Hochzeits DJ Kroatien & Wedding DJ Istrien | DJ Keggy",
-      "description": "Wedding DJ in Kroatien: DJ Keggy für Hochzeiten in Istrien, Rovinj und Opatija. 15+ Jahre Erfahrung, individuelle Musik, Sound & Licht. Termin anfragen."
+      "title": "Hochzeits DJ Kroatien & Istrien | DJ Keggy",
+      "description": "Hochzeits-DJ in Kroatien und Istrien: DJ Keggy aus Poreč für Hochzeiten in Rovinj, Opatija und Europa. Individuelle Musik, Sound und Licht. Termin anfragen."
     }
   },
   "en": {
@@ -454,8 +454,8 @@ const translations = {
       "menu": "Open or close menu",
       "language": "Language selection",
       "close": "Close image",
-      "dj": "DJ KEGGY at the decks in front of a celebrating wedding party",
-      "event": "DJ KEGGY at the decks on the Croatian coast",
+      "dj": "DJ KEGGY raising his arm at the decks in front of dancing wedding guests",
+      "event": "DJ KEGGY wearing headphones at the DJ decks beside the sea",
       "pause": "Pause background video",
       "play": "Play background video",
       "skip": "Skip to content"
@@ -478,7 +478,7 @@ const translations = {
       "heading": "DESTINATION WEDDING DJ IN ISTRIA",
       "eyebrow": "BASED IN POREČ. PART OF YOUR STORY.",
       "p1": "Istria offers some of Croatia’s most beautiful wedding venues, from elegant villas and resorts to romantic settings right by the sea.",
-      "p2": "As a wedding DJ based in Poreč, I cover Vrsar, Rovinj, Umag, Novigrad, Pula and all of Istria.",
+      "p2": "As a wedding DJ in Istria based in Poreč, I provide music for weddings in Rovinj, Vrsar, Umag, Novigrad and Pula, from the reception to the party.",
       "p3": "Destination weddings on Krk and Rab, in Opatija, Rijeka / Kvarner, Zagreb, Split and Dalmatia, as well as throughout Croatia and Europe, are also possible."
     },
     "balkan": {
@@ -519,8 +519,8 @@ const translations = {
       "copy": "More music, moments and behind the scenes."
     },
     "seo": {
-      "title": "Destination Wedding DJ Croatia & Istria | DJ Keggy",
-      "description": "DJ Keggy, your destination wedding DJ in Croatia. Weddings in Istria, Rovinj and Opatija with personal music planning, sound and lighting. Check your date."
+      "title": "Wedding DJ Croatia & Istria | DJ Keggy",
+      "description": "Destination wedding DJ in Croatia: DJ Keggy, based in Poreč, for weddings in Istria, Rovinj, Opatija and Europe. Personal music planning, sound and lighting."
     }
   },
   "it": {
@@ -716,8 +716,8 @@ const translations = {
       "menu": "Apri o chiudi il menu",
       "language": "Selezione della lingua",
       "close": "Chiudi immagine",
-      "dj": "DJ KEGGY alla console davanti agli invitati in festa",
-      "event": "DJ KEGGY alla console sulla costa croata",
+      "dj": "DJ KEGGY alla console con il braccio alzato davanti agli invitati che ballano",
+      "event": "DJ KEGGY con le cuffie alla console in riva al mare",
       "pause": "Metti in pausa il video di sfondo",
       "play": "Riproduci il video di sfondo",
       "skip": "Vai al contenuto"
@@ -781,8 +781,8 @@ const translations = {
       "copy": "Ancora più musica, momenti e retroscena."
     },
     "seo": {
-      "title": "DJ matrimoni Croazia e Istria | DJ Keggy",
-      "description": "DJ Keggy per il vostro matrimonio in Croazia: Istria, Rovigno e Abbazia. Musica personalizzata, audio e luci con oltre 15 anni di esperienza."
+      "title": "DJ per matrimoni in Croazia e Istria | DJ Keggy",
+      "description": "DJ Keggy per matrimoni in Croazia e Istria: da Parenzo a Rovigno e Abbazia, anche in Europa. Musica personalizzata, audio e luci. Richiedete la disponibilità."
     }
   },
   "hr": {
@@ -978,8 +978,8 @@ const translations = {
       "menu": "Otvorite ili zatvorite izbornik",
       "language": "Odabir jezika",
       "close": "Zatvorite sliku",
-      "dj": "DJ KEGGY za pultom ispred svatova koji slave",
-      "event": "DJ KEGGY za pultom na hrvatskoj obali",
+      "dj": "DJ KEGGY za pultom s podignutom rukom ispred svatova koji plešu",
+      "event": "DJ KEGGY sa slušalicama za DJ pultom uz more",
       "pause": "Pauziraj pozadinski video",
       "play": "Pokreni pozadinski video",
       "skip": "Preskoči na sadržaj"
@@ -1043,8 +1043,8 @@ const translations = {
       "copy": "Još više glazbe, trenutaka i pogleda iza kulisa."
     },
     "seo": {
-      "title": "DJ za vjenčanja Hrvatska i Istra | DJ Keggy",
-      "description": "DJ Keggy za vjenčanja u Hrvatskoj: Istra, Rovinj i Opatija. Više od 15 godina iskustva, individualni odabir glazbe, razglas i rasvjeta. Provjerite termin."
+      "title": "DJ za vjenčanja u Hrvatskoj i Istri | DJ Keggy",
+      "description": "DJ Keggy iz Poreča za vjenčanja u Istri, Rovinju, Opatiji i diljem Hrvatske i Europe. Individualni odabir glazbe, razglas i rasvjeta. Provjerite termin."
     }
   }
 };
