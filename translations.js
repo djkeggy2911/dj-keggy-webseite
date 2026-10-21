@@ -12,7 +12,7 @@ const translations = {
     "hero": {
       "eyebrow": "CROATIA • EUROPE",
       "badge": "DJ KEGGY – Wedding & Event DJ",
-      "title": "HOCHZEITEN, DIE MAN NICHT VERGISST.",
+      "title": "HOCHZEITS DJ IN KROATIEN",
       "copy": "15+ Jahre Erfahrung, rund 40 Hochzeiten pro Jahr und ein Gespür für die Musik, die Menschen verbindet. Von exklusiven Hochzeiten in Istrien bis zu Destination Weddings in Kroatien und ganz Europa.",
       "ctaPrimary": "JETZT TERMIN ANFRAGEN",
       "ctaSecondary": "HOCHZEITEN ENTDECKEN",
@@ -25,7 +25,7 @@ const translations = {
       "heading": "MUSIK, ERFAHRUNG UND DAS RICHTIGE GESPÜR FÜR DEN MOMENT.",
       "p1": "Ich bin DJ KEGGY und lebe in Poreč, Istrien. Seit über 15 Jahren begleite ich Hochzeiten, Clubs, private Feiern und Events mit Musik.",
       "cta": "TERMIN ANFRAGEN",
-      "p3": "Heute liegt mein Fokus auf Hochzeiten in Istrien, ganz Kroatien, Deutschland und Europa. Nach vielen Jahren in der Schweiz und zahlreichen Hochzeiten, die ich dort begleitet habe, spiele ich heute auf nationalen und internationalen Hochzeiten in ganz Europa. Mit der Erfahrung aus rund 40 Hochzeiten pro Jahr verbinde ich durch Musik unterschiedliche Kulturen und Generationen.",
+      "p3": "Heute liegt mein Fokus auf Hochzeiten in Istrien, ganz Kroatien, Deutschland und Europa. Nach vielen Jahren in der Schweiz und zahlreichen Hochzeiten, die ich dort begleitet habe, spiele ich heute auf nationalen und internationalen Hochzeiten in ganz Europa. Mit der Erfahrung aus rund 40 Hochzeiten pro Jahr verbinde ich durch Musik unterschiedliche Kulturen und Generationen. Ihr plant als Brautpaar aus der Schweiz eure Hochzeit in Kroatien? Als Hochzeits-DJ bringe ich meine Schweizer Erfahrung in eure Feier an der Adriaküste ein.",
       "p4": "Von Balkan und kroatischer Musik über House und Afro House bis zu 90ern, 2000ern, Pop, Rock, Hip-Hop, R&B, Latin, Reggaeton und internationalen Partyhits entsteht jede Musikauswahl individuell.",
       "p5": "Keine Hochzeit ist gleich und deshalb gibt es bei mir keine Standard-Playlist.",
       "p6": "Mein Ziel ist nicht einfach nur Musik abzuspielen. Ich möchte den richtigen Song im richtigen Moment spielen und eine Atmosphäre schaffen, an die sich das Brautpaar und seine Gäste noch lange erinnern."
@@ -213,11 +213,11 @@ const translations = {
       "text4": "Sie können sich über die oben genannten Kontaktdaten an uns wenden, um Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit nach den anwendbaren Voraussetzungen zu verlangen. Gegen eine Verarbeitung auf Grundlage berechtigter Interessen können Sie Widerspruch einlegen. Eine erteilte Einwilligung können Sie für die Zukunft widerrufen. Sie können sich bei einer zuständigen Datenschutzaufsichtsbehörde beschweren."
     },
     "destination": {
-      "heading": "DESTINATION WEDDINGS IN ISTRIEN",
+      "heading": "WEDDING DJ IN ISTRIEN",
       "eyebrow": "VON POREČ AUS. FÜR EURE GESCHICHTE.",
       "p1": "Istrien bietet einige der schönsten Hochzeitslocations Kroatiens – von eleganten Villen und Resorts bis zu romantischen Locations direkt am Meer.",
-      "p2": "Von meinem Standort in Poreč begleite ich Hochzeiten in Poreč, Vrsar, Rovinj, Umag, Novigrad, Pula und ganz Istrien.",
-      "p3": "Auch Destination Weddings auf Krk, Rab, in Rijeka / Kvarner, Zagreb, Split, Dalmatien sowie in ganz Kroatien und Europa sind möglich."
+      "p2": "Als Wedding DJ in Istrien begleite ich von Poreč aus Hochzeiten in Vrsar, Rovinj, Umag, Novigrad und Pula – vom Empfang bis zur Party.",
+      "p3": "Auch Destination Weddings auf Krk, Rab, in Opatija, Rijeka / Kvarner, Zagreb, Split, Dalmatien sowie in ganz Kroatien und Europa sind möglich."
     },
     "balkan": {
       "heading": "BALKAN WEDDINGS MIT INTERNATIONALER ERFAHRUNG",
@@ -257,8 +257,8 @@ const translations = {
       "copy": "Noch mehr Musik, Momente und Einblicke."
     },
     "seo": {
-      "title": "DJ Keggy | Hochzeits DJ Kroatien & Destination Wedding DJ Istrien",
-      "description": "DJ Keggy – Hochzeits- und Event-DJ aus Poreč, Kroatien. 15+ Jahre Erfahrung und rund 40 Hochzeiten pro Jahr. Destination Weddings in Istrien, Kroatien und europaweit."
+      "title": "Hochzeits DJ Kroatien & Wedding DJ Istrien | DJ Keggy",
+      "description": "Wedding DJ in Kroatien: DJ Keggy für Hochzeiten in Istrien, Rovinj und Opatija. 15+ Jahre Erfahrung, individuelle Musik, Sound & Licht. Termin anfragen."
     }
   },
   "en": {
@@ -274,7 +274,7 @@ const translations = {
     "hero": {
       "eyebrow": "CROATIA • EUROPE",
       "badge": "DJ KEGGY – Wedding & Event DJ",
-      "title": "WEDDINGS YOU NEVER FORGET.",
+      "title": "WEDDING DJ IN CROATIA",
       "copy": "15+ years of experience, around 40 weddings every year and a feeling for the music that brings people together. From exclusive weddings in Istria to destination weddings throughout Croatia and Europe.",
       "ctaPrimary": "CHECK AVAILABILITY",
       "ctaSecondary": "DISCOVER WEDDINGS",
@@ -475,11 +475,11 @@ const translations = {
       "text4": "Using the contact details above, you may request access, rectification, erasure, restriction or portability under the applicable conditions. You may object to processing based on legitimate interests. Any consent you have given may be withdrawn for the future. You may lodge a complaint with a competent data protection supervisory authority."
     },
     "destination": {
-      "heading": "DESTINATION WEDDINGS IN ISTRIA",
+      "heading": "DESTINATION WEDDING DJ IN ISTRIA",
       "eyebrow": "BASED IN POREČ. PART OF YOUR STORY.",
       "p1": "Istria offers some of Croatia’s most beautiful wedding venues, from elegant villas and resorts to romantic settings right by the sea.",
       "p2": "As a wedding DJ based in Poreč, I cover Vrsar, Rovinj, Umag, Novigrad, Pula and all of Istria.",
-      "p3": "Destination weddings on Krk and Rab, in Rijeka / Kvarner, Zagreb, Split and Dalmatia, as well as throughout Croatia and Europe, are also possible."
+      "p3": "Destination weddings on Krk and Rab, in Opatija, Rijeka / Kvarner, Zagreb, Split and Dalmatia, as well as throughout Croatia and Europe, are also possible."
     },
     "balkan": {
       "heading": "BALKAN WEDDINGS WITH INTERNATIONAL EXPERIENCE",
@@ -519,8 +519,8 @@ const translations = {
       "copy": "More music, moments and behind the scenes."
     },
     "seo": {
-      "title": "DJ Keggy | Wedding DJ Croatia & Destination Wedding DJ Istria",
-      "description": "DJ Keggy – wedding and event DJ based in Poreč, Croatia. 15+ years of experience and around 40 weddings a year. Destination weddings in Istria, Croatia and Europe."
+      "title": "Destination Wedding DJ Croatia & Istria | DJ Keggy",
+      "description": "DJ Keggy, your destination wedding DJ in Croatia. Weddings in Istria, Rovinj and Opatija with personal music planning, sound and lighting. Check your date."
     }
   },
   "it": {
@@ -536,7 +536,7 @@ const translations = {
     "hero": {
       "eyebrow": "CROAZIA • EUROPA",
       "badge": "DJ KEGGY – Wedding & Event DJ",
-      "title": "MATRIMONI CHE NON SI DIMENTICANO.",
+      "title": "DJ PER MATRIMONI IN CROAZIA",
       "copy": "15+ anni di esperienza, circa 40 matrimoni all’anno e la capacità di scegliere la musica giusta per unire gli ospiti. Dai matrimoni esclusivi in Istria ai destination wedding in tutta la Croazia e in Europa.",
       "ctaPrimary": "RICHIEDI DISPONIBILITÀ",
       "ctaSecondary": "SCOPRI I MATRIMONI",
@@ -741,7 +741,7 @@ const translations = {
       "eyebrow": "DA POREČ. PER LA VOSTRA STORIA.",
       "p1": "L’Istria offre alcune delle più belle location per matrimoni della Croazia, dalle ville eleganti ai resort e ai romantici luoghi sul mare.",
       "p2": "Dalla mia base a Poreč accompagno matrimoni a Poreč, Vrsar, Rovinj, Umag, Novigrad, Pula e in tutta l’Istria.",
-      "p3": "Sono disponibili anche destination wedding a Krk, Rab, Rijeka / Quarnero, Zagabria, Spalato, in Dalmazia, in tutta la Croazia e in Europa."
+      "p3": "Sono disponibili anche destination wedding a Krk, Rab, Abbazia, Rijeka / Quarnero, Zagabria, Spalato, in Dalmazia, in tutta la Croazia e in Europa."
     },
     "balkan": {
       "heading": "MATRIMONI BALCANICI CON ESPERIENZA INTERNAZIONALE",
@@ -781,8 +781,8 @@ const translations = {
       "copy": "Ancora più musica, momenti e retroscena."
     },
     "seo": {
-      "title": "DJ Keggy | DJ matrimoni Croazia & Destination Wedding Istria",
-      "description": "DJ Keggy – DJ per matrimoni ed eventi a Poreč, Croazia. Oltre 15 anni di esperienza e circa 40 matrimoni all’anno. Destination wedding in Istria, Croazia ed Europa."
+      "title": "DJ matrimoni Croazia e Istria | DJ Keggy",
+      "description": "DJ Keggy per il vostro matrimonio in Croazia: Istria, Rovigno e Abbazia. Musica personalizzata, audio e luci con oltre 15 anni di esperienza."
     }
   },
   "hr": {
@@ -798,7 +798,7 @@ const translations = {
     "hero": {
       "eyebrow": "HRVATSKA • EUROPA",
       "badge": "DJ KEGGY – Wedding & Event DJ",
-      "title": "VJENČANJA KOJA SE NE ZABORAVLJAJU.",
+      "title": "DJ ZA VJENČANJA U HRVATSKOJ",
       "copy": "15+ godina iskustva, oko 40 vjenčanja godišnje i osjećaj za glazbu koja povezuje ljude. Od ekskluzivnih vjenčanja u Istri do destination wedding proslava diljem Hrvatske i Europe.",
       "ctaPrimary": "ZATRAŽI TERMIN",
       "ctaSecondary": "OTKRIJ VJENČANJA",
@@ -999,11 +999,11 @@ const translations = {
       "text4": "Putem navedenih kontakata možete zatražiti pristup, ispravak, brisanje, ograničenje obrade ili prenosivost podataka u skladu s primjenjivim uvjetima. Možete uložiti prigovor na obradu utemeljenu na legitimnim interesima. Danu privolu možete povući za buduću obradu. Možete podnijeti pritužbu nadležnom tijelu za zaštitu osobnih podataka."
     },
     "destination": {
-      "heading": "DESTINATION WEDDINGS U ISTRI",
+      "heading": "DJ ZA VJENČANJA U ISTRI",
       "eyebrow": "IZ POREČA. ZA VAŠU PRIČU.",
       "p1": "Istra nudi neke od najljepših lokacija za vjenčanja u Hrvatskoj, od elegantnih vila i resorta do romantičnih prostora uz more.",
       "p2": "Iz svoje baze u Poreču pratim vjenčanja u Poreču, Vrsaru, Rovinju, Umagu, Novigradu, Puli i cijeloj Istri.",
-      "p3": "Moguća su i destination vjenčanja na Krku, Rabu, u Rijeci i na Kvarneru, u Zagrebu, Splitu, Dalmaciji te diljem Hrvatske i Europe."
+      "p3": "Moguća su i destination vjenčanja na Krku, Rabu, u Opatiji, Rijeci i na Kvarneru, u Zagrebu, Splitu, Dalmaciji te diljem Hrvatske i Europe."
     },
     "balkan": {
       "heading": "BALKANSKA VJENČANJA UZ MEĐUNARODNO ISKUSTVO",
@@ -1043,14 +1043,17 @@ const translations = {
       "copy": "Još više glazbe, trenutaka i pogleda iza kulisa."
     },
     "seo": {
-      "title": "DJ Keggy | DJ za vjenčanja Hrvatska & Destination Wedding Istra",
-      "description": "DJ Keggy – DJ za vjenčanja i događaje iz Poreča. Više od 15 godina iskustva i oko 40 vjenčanja godišnje. Destination weddings u Istri, Hrvatskoj i Europi."
+      "title": "DJ za vjenčanja Hrvatska i Istra | DJ Keggy",
+      "description": "DJ Keggy za vjenčanja u Hrvatskoj: Istra, Rovinj i Opatija. Više od 15 godina iskustva, individualni odabir glazbe, razglas i rasvjeta. Provjerite termin."
     }
   }
 };
 
 const applyTranslation = (lang) => {
     document.documentElement.lang = lang;
+    const pageUrl = 'https://marrydj.com/' + (lang === 'de' ? '' : lang + '.html');
+    document.querySelector('link[rel="canonical"]').href = pageUrl;
+    document.querySelector('meta[property="og:url"]').content = pageUrl;
     document.title = translations[lang].seo.title;
     document.querySelector('meta[name="description"]').content = translations[lang].seo.description;
     document.querySelector('meta[property="og:title"]').content = translations[lang].seo.title;
@@ -1143,11 +1146,11 @@ const getTranslation = (key, fallback = '') => {
 };
 
 window.getTranslation = getTranslation;
-window.currentLanguage = 'de';
+window.currentLanguage = document.documentElement.lang || 'de';
 
 window.addEventListener('DOMContentLoaded', () => {
     const requested = new URLSearchParams(location.search).get('lang');
-    const defaultLang = Object.hasOwn(translations, requested) ? requested : 'de';
+    const defaultLang = Object.hasOwn(translations, requested) ? requested : (Object.hasOwn(translations, document.documentElement.lang) ? document.documentElement.lang : 'de');
     window.currentLanguage = defaultLang;
     applyTranslation(defaultLang);
     setActiveLanguage(defaultLang);
@@ -1161,7 +1164,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 setActiveLanguage(lang);
                 document.dispatchEvent(new CustomEvent('languagechange'));
                 const url = new URL(location.href);
-                url.searchParams.set('lang', lang);
+                url.pathname = lang === 'de' ? '/' : '/' + lang + '.html';
+                url.searchParams.delete('lang');
                 try { history.replaceState(null, '', url); } catch { /* Local file previews may restrict history. */ }
             }
         });

@@ -23,3 +23,8 @@ review/review.css
 review/homepage.js
 review/translations.json
 review/.htaccess
+en.html
+it.html
+hr.html
+robots.txt
+sitemap.xml

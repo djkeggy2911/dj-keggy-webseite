@@ -41,6 +41,7 @@ jobs:
           node --check script.js
           node --check translations.js
           node tools/check-site.cjs
+          node tools/check-seo.cjs
           php -l send-offer.php
           php -l whatsapp-notify.php
           php -l admin/core.php

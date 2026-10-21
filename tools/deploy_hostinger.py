@@ -12,6 +12,7 @@ import sys
 ROOT_FILES = {
     'index.html', 'style.css', 'script.js', 'translations.js',
     'send-offer.php', 'whatsapp-notify.php',
+    'en.html', 'it.html', 'hr.html', 'robots.txt', 'sitemap.xml',
 }
 MEDIA_TYPES = {'images': {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.svg'},
                'videos': {'.mp4', '.webm'}}
