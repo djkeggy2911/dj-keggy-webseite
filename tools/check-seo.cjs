@@ -22,13 +22,39 @@ for(const [lang,url] of Object.entries(urls)) {
  assert(business.areaServed.includes('Opatija'));
  // Direct language URLs initialize without needing a query parameter.
  let loaded; const metas={};
- const document={documentElement:{lang},querySelectorAll:()=>[],querySelector:s=>metas[s]??={}};
+ const guideLink={hidden:lang!=='hr'};
+ const document={documentElement:{lang},querySelectorAll:s=>s==='[data-hr-guide]'?[guideLink]:[],querySelector:s=>metas[s]??={}};
  const window={addEventListener:(event,fn)=>{if(event==='DOMContentLoaded')loaded=fn;}};
  vm.runInNewContext(source,{document,window,location:{search:''},URLSearchParams});loaded();
  assert.equal(window.currentLanguage,lang);
  assert.equal(document.title,data[lang].seo.title);
  assert.equal(metas['link[rel="canonical"]'].href,url);
+ assert.equal(guideLink.hidden,lang!=='hr');
+ assert.equal(html.includes('data-hr-guide hidden'),lang!=='hr');
  assert(fs.readFileSync('sitemap.xml','utf8').includes(`<loc>${url}</loc>`));
 }
 assert.match(fs.readFileSync('robots.txt','utf8'),/Sitemap: https:\/\/marrydj.com\/sitemap.xml/);
 console.log('PASS: four static languages, headings, metadata, canonical/hreflang, schema, language initialization and sitemap.');
+const guideFile='dj-za-vjencanja-hrvatska.html';
+const guide=fs.readFileSync(guideFile,'utf8');
+const guideUrl='https://marrydj.com/'+guideFile;
+assert.equal((guide.match(/<h1\b/g)||[]).length,1);
+assert(guide.includes('<html lang="hr">'));
+assert(guide.includes(`rel="canonical" href="${guideUrl}"`));
+assert(!guide.includes('hreflang='),'Guide has no translated equivalents');
+assert(!/noindex|translations\.js|<!-- SEO_HEAD -->/.test(guide));
+const graph=JSON.parse(guide.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+assert.equal(graph.find(x=>x['@type']==='WebPage').url,guideUrl);
+assert.equal(graph.find(x=>x['@type']==='Service').provider['@id'],graph.find(x=>x['@type']==='ProfessionalService')['@id']);
+for(const file of ['index.html','en.html','it.html','hr.html',guideFile]) {
+ const html=fs.readFileSync(file,'utf8');
+ assert(html.includes('content="Xd5tc-gVxEqweweXB4eyCssxd8W_wpnrUkpDgsEE4FI"'));
+ for(const m of html.matchAll(/(?:href|src)="([^"?#]*)(?:\?[^"#]*)?(?:#([^"]+))?"/g)) {
+  if(/^[a-z]+:|^\/\//i.test(m[1]))continue;
+  const target=m[1]||file;assert(fs.existsSync(target),`Missing ${target}`);
+  if(m[2])assert(fs.readFileSync(target,'utf8').includes(`id="${m[2]}"`),`Missing anchor ${m[0]}`);
+ }
+}
+assert(fs.readFileSync('sitemap.xml','utf8').includes(`<loc>${guideUrl}</loc>`));
+assert(fs.readFileSync('deploy-files.txt','utf8').split(/\r?\n/).includes(guideFile));
+console.log('PASS: Croatian guide schema, canonical, links, language visibility, sitemap, deployment and verification token.');

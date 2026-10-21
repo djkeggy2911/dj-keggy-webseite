@@ -32,7 +32,29 @@ for(const [lang,url] of Object.entries(urls)) {
   const business=JSON.parse(json); business.description=data[lang].seo.description;
   return a+JSON.stringify(business)+b;
  });
+ if (lang === 'hr') html = html.replace('data-hr-guide hidden', 'data-hr-guide');
  fs.writeFileSync(lang==='de'?'index.html':lang+'.html',html);
 }
-fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+Object.values(urls).map(url=>'  <url><loc>'+url+'</loc></url>').join('\n')+'\n</urlset>\n');
-console.log('Generated four localized HTML pages and sitemap.xml.');
+const guideUrl = 'https://marrydj.com/dj-za-vjencanja-hrvatska.html';
+const guideTitle = 'DJ za vjenčanja u Hrvatskoj | Glazba i cijena | DJ Keggy';
+const guideDescription = 'DJ za svadbe u Istri i cijeloj Hrvatskoj: glazba, razglas, rasvjeta i moderacija po dogovoru. Saznajte kako planirati vjenčanje i zatražiti ponudu.';
+let head = fs.readFileSync('hr.html','utf8').match(/<head>([\s\S]*?)<\/head>/)[1];
+head = head.replace(/<link rel="alternate"[^>]*>\n?/g,'')
+ .replace(/<title>[\s\S]*?<\/title>/,()=>'<title>'+escape(guideTitle)+'</title>')
+ .replace(/(<meta (?:name="description"|property="og:description") content=")[^"]*(">)/g,(_,a,b)=>a+escape(guideDescription)+b)
+ .replace(/(<meta property="og:title" content=")[^"]*(">)/,(_,a,b)=>a+escape(guideTitle)+b)
+ .replace(/(<link rel="canonical" href=")[^"]*(">)/,(_,a,b)=>a+guideUrl+b)
+ .replace(/(<meta property="og:url" content=")[^"]*(">)/,(_,a,b)=>a+guideUrl+b)
+ .replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/,(_,a,json,b)=>{
+  const business = JSON.parse(json);
+  const service = {...business.hasOfferCatalog.itemListElement[0].itemOffered,
+   '@id':guideUrl+'#service',url:guideUrl,name:'DJ za vjenčanja u Hrvatskoj',
+   description:guideDescription,provider:{'@id':business['@id']}};
+  const page = {'@type':'WebPage','@id':guideUrl+'#webpage',url:guideUrl,name:guideTitle,
+   description:guideDescription,inLanguage:'hr',mainEntity:{'@id':service['@id']}};
+  return a+JSON.stringify({'@context':'https://schema.org','@graph':[business,service,page]})+b;
+ });
+const guide = fs.readFileSync('tools/croatian-wedding-page.html','utf8').replace(/\r\n/g,'\n').replace('<!-- SEO_HEAD -->',()=>head.trim());
+fs.writeFileSync('dj-za-vjencanja-hrvatska.html',guide);
+fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+[...Object.values(urls),guideUrl].map(url=>'  <url><loc>'+url+'</loc></url>').join('\n')+'\n</urlset>\n');
+console.log('Generated four localized homepages, Croatian wedding guide and sitemap.xml.');

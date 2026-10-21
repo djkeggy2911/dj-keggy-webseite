@@ -28,3 +28,4 @@ it.html
 hr.html
 robots.txt
 sitemap.xml
+dj-za-vjencanja-hrvatska.html

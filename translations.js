@@ -818,7 +818,7 @@ const translations = {
     },
     "services": {
       "eyebrow": "Usluge",
-      "heading": "GLAZBA ZA POSEBNE TRENUTKE",
+      "heading": "GLAZBA ZA VJENČANJA I POSEBNE TRENUTKE",
       "card1": {
         "title": "DJ ZA VJENČANJA",
         "copy": "Glazbena pratnja od dočeka do zabave, prilagođena mladencima, gostima i tijeku vjenčanja."
@@ -1002,8 +1002,8 @@ const translations = {
       "heading": "DJ ZA VJENČANJA U ISTRI",
       "eyebrow": "IZ POREČA. ZA VAŠU PRIČU.",
       "p1": "Istra nudi neke od najljepših lokacija za vjenčanja u Hrvatskoj, od elegantnih vila i resorta do romantičnih prostora uz more.",
-      "p2": "Iz svoje baze u Poreču pratim vjenčanja u Poreču, Vrsaru, Rovinju, Umagu, Novigradu, Puli i cijeloj Istri.",
-      "p3": "Moguća su i destination vjenčanja na Krku, Rabu, u Opatiji, Rijeci i na Kvarneru, u Zagrebu, Splitu, Dalmaciji te diljem Hrvatske i Europe."
+      "p2": "Kao DJ za svadbe sa sjedištem u Poreču, pratim vjenčanja u Rovinju, Puli, Vrsaru, Umagu, Novigradu i cijeloj Istri. Glazbu planiramo prema vašim željama i gostima.",
+      "p3": "Planirate vjenčanje u Opatiji, Zagrebu, Zadru ili Splitu? Dostupan sam i za proslave na Krku i Rabu te diljem Hrvatske i Europe, uz prethodni dogovor o terminu i lokaciji."
     },
     "balkan": {
       "heading": "BALKANSKA VJENČANJA UZ MEĐUNARODNO ISKUSTVO",
@@ -1043,13 +1043,14 @@ const translations = {
       "copy": "Još više glazbe, trenutaka i pogleda iza kulisa."
     },
     "seo": {
-      "title": "DJ za vjenčanja u Hrvatskoj i Istri | DJ Keggy",
-      "description": "DJ Keggy iz Poreča za vjenčanja u Istri, Rovinju, Opatiji i diljem Hrvatske i Europe. Individualni odabir glazbe, razglas i rasvjeta. Provjerite termin."
+      "title": "DJ za vjenčanja Istra i Poreč | DJ Keggy",
+      "description": "DJ Keggy iz Poreča: DJ za vjenčanja i svadbe u Istri i cijeloj Hrvatskoj. Glazba po vašem izboru, razglas i rasvjeta. Provjerite termin i zatražite ponudu."
     }
   }
 };
 
 const applyTranslation = (lang) => {
+    document.querySelectorAll('[data-hr-guide]').forEach(link => { link.hidden = lang !== 'hr'; });
     document.documentElement.lang = lang;
     const pageUrl = 'https://marrydj.com/' + (lang === 'de' ? '' : lang + '.html');
     document.querySelector('link[rel="canonical"]').href = pageUrl;
